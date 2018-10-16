@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="css,代码模块化," />
 
 
 
@@ -96,16 +96,20 @@
 
 
 
-<meta name="description" content="愿阳光中是个孩子,风雨中是个大人.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ziven 在说话">
-<meta property="og:url" content="http://zivenday.github.io/archives/index.html">
+<meta name="description" content="很自然的，CSS是用来解决元素在页面放置在哪里的问题。大体上来说，页面上大组件和相对较小组件的布局是有所区别的。小组件比方说是标注12345678910```#header, #article, #footer &amp;#123;    width: 960px;    margin: auto;&amp;#125;#article &amp;#123;    border: solid #CCC;    bord">
+<meta name="keywords" content="css,代码模块化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="可扩展、模块化CSS--布局样式规则">
+<meta property="og:url" content="http://zivenday.github.io/2018/02/03/2018-02-03-可扩展、模块化CSS--布局样式规则/index.html">
 <meta property="og:site_name" content="Ziven 在说话">
-<meta property="og:description" content="愿阳光中是个孩子,风雨中是个大人.">
+<meta property="og:description" content="很自然的，CSS是用来解决元素在页面放置在哪里的问题。大体上来说，页面上大组件和相对较小组件的布局是有所区别的。小组件比方说是标注12345678910```#header, #article, #footer &amp;#123;    width: 960px;    margin: auto;&amp;#125;#article &amp;#123;    border: solid #CCC;    bord">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4455053-f90e39856d027ef0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-10-11T09:54:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ziven 在说话">
-<meta name="twitter:description" content="愿阳光中是个孩子,风雨中是个大人.">
+<meta name="twitter:title" content="可扩展、模块化CSS--布局样式规则">
+<meta name="twitter:description" content="很自然的，CSS是用来解决元素在页面放置在哪里的问题。大体上来说，页面上大组件和相对较小组件的布局是有所区别的。小组件比方说是标注12345678910```#header, #article, #footer &amp;#123;    width: 960px;    margin: auto;&amp;#125;#article &amp;#123;    border: solid #CCC;    bord">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4455053-f90e39856d027ef0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -134,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://zivenday.github.io/archives/"/>
+  <link rel="canonical" href="http://zivenday.github.io/2018/02/03/2018-02-03-可扩展、模块化CSS--布局样式规则/"/>
 
 
 
 
 
-  <title>归档 | Ziven 在说话</title>
+  <title>可扩展、模块化CSS--布局样式规则 | Ziven 在说话</title>
   
 
 
@@ -175,7 +179,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -313,416 +317,228 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      <span class="archive-page-counter">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zivenday.github.io/2018/02/03/2018-02-03-可扩展、模块化CSS--布局样式规则/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ziven 先生">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/WechatIMG13.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ziven 在说话">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">可扩展、模块化CSS--布局样式规则</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-03T00:00:00+08:00">
+                2018-02-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 20 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
 
-      
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
+                  </a>
+                </span>
 
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2018">2018</h2>
-          </div>
-        
-        
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/08/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-08T17:23:38+08:00"
-              content="2018-10-08" >
-          10-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--布局样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--布局样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--模块样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--模块样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--基础样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--基础样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--样式的分类和规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--样式的分类和规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--主题样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--主题样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--状态样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--状态样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-          </div>
-        
-        
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/02/03/2018-02-03-可扩展、模块化CSS--布局样式规则/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/02/03/2018-02-03-可扩展、模块化CSS--布局样式规则/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/27/2017-12-27-javascript撸来撸去(1)-事件监听与对象属性/" itemprop="url">
-              
-                <span itemprop="name">javascript撸来撸去(1)-事件监听与对象属性</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-27T00:00:00+08:00"
-              content="2017-12-27" >
-          12-27
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（1）/" itemprop="url">
-              
-                <span itemprop="name">Vue内容管理系统的搭建(一)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-26T00:00:00+08:00"
-              content="2017-12-26" >
-          12-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <p><img src="http://upload-images.jianshu.io/upload_images/4455053-f90e39856d027ef0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="SMACSS is becoming one of the most useful contributions to front-end discussions in years"></p>
+<blockquote>
+<p>很自然的，CSS是用来解决元素在页面放置在哪里的问题。大体上来说，页面上大组件和相对较小组件的布局是有所区别的。小组件比方说是标注<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">#header, #article, #footer &#123;</span><br><span class="line">    width: 960px;</span><br><span class="line">    margin: auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#article &#123;</span><br><span class="line">    border: solid #CCC;</span><br><span class="line">    border-width: 1px 0 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>布局样式同样也可以在是否复用的角度对其进行划分为主要和较小两个方面。主要的布局样式，如页眉和页脚，传统上是使用ID选择器的，但是要花时间考虑页面所有组件中常见的元素，并在适当的时候使用类选择器。<br>有些网站可能需要更加通用的布局框架，有些相对较小的布局样式使用类选择器替换ID选择器，这样可以在多个页面多次使用。<br>一般来说，布局样式拥有唯一ID或者类名。然而，因为不同因素，布局样式也要进行多变。比如说，同一布局样式可能在不同的用户体验上要做出有所不同，这个不同的表现也应该是布局样式的一部分。当然，同样这些不同的布局样式也是要被多次复用，并且也能够和其他的布局样式混合使用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">使用更高层次布局风格影响其他布局风格</span><br><span class="line">#article &#123;</span><br><span class="line">    float: left;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#sidebar &#123;</span><br><span class="line">    float: right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.l-flipped #article &#123;</span><br><span class="line">    float: right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.l-flipped #sidebar &#123;</span><br><span class="line">    float: left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在上面的布局例子中，使<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">使用两种布局风格从流式布局转向固定布局</span><br><span class="line">#article &#123;</span><br><span class="line">    width: 80%;</span><br><span class="line">    float: left;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#sidebar &#123;</span><br><span class="line">    width: 20%;</span><br><span class="line">    float: right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.l-fixed #article &#123;</span><br><span class="line">    width: 600px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.l-fixed #sidebar &#123;</span><br><span class="line">    width: 200px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>而在这个例子中，<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">在布局的例子是另一个需要注意的我用的命名约定，声明使用```ID```选择器命名准确、没有特定的命名空间或者说是修饰，使用前缀的方式很显然让我们知道它是用来形容布局的。如果你要用布局样式，你就用```ID```选择器。如果你要在```ID```选择器上进行更多的修饰，是没有必要的。</span><br><span class="line">######使用```ID```选择器</span><br><span class="line">可以清晰的讲，使用```ID```选择器绝对是有好处的，在一些情况下。它可以作为```Javascript```的钩子。然而，在性能表现上使用```ID```和类选择器，两种并没有差异，反而因为特殊命名而增加复杂性。</span><br><span class="line">######布局范例</span><br><span class="line">理论是一回事，实际运用却是另外一回事。让我们看看现在的一些网站，了解到什么是布局样式，什么是模块样式。</span><br><span class="line">![CNN主页](http://upload-images.jianshu.io/upload_images/4455053-c6cbac9a7f0366a0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620)</span><br><span class="line">CNN的网站布局模式在其他网站中也有同样的运用。比如，它有页眉，导航栏，内容栏和页尾。</span><br><span class="line">![布局](http://upload-images.jianshu.io/upload_images/4455053-20f01e30e9deff1c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620)</span><br><span class="line">在撰写本文时,网站密切遵循这个分解并提供这些主要部分的ID属性。</span><br></pre></td></tr></table></figure></p>
+<p>我们的css结构大致这样</p>
+<p>#header { … }</p>
+<p>#primarynav { … }</p>
+<p>#maincontent { … }</p>
+<div id="header"></div><br><div id="primarynav"></div><br><div id="maincontent"></div><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在这里，可能你还是有疑惑，这个布局太过简单，有没有更加详细的说明本章主题内容的例子呢？</span><br><span class="line">![CNN的featured部分](http://upload-images.jianshu.io/upload_images/4455053-72309dd43a7ea0f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620)</span><br><span class="line">在上面的截图里，是一个网格布局的例子，它标记了一系列的div和子div。我更愿意用list来替换它。</span><br></pre></td></tr></table></figure><br><br>featured的html代码<br><div><br><h2>Featured</h2><br><ul><br>    <li><a href="…">…</a></li><br>    <li><a href="…">…</a></li><br>    …<br></ul><br></div>
 
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（6）之服务器配置部署/" itemprop="url">
-              
-                <span itemprop="name">Vue 内容管理系统的搭建(六)之服务器配置部署</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-26T00:00:00+08:00"
-              content="2017-12-26" >
-          12-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在没有使用```SMACSS```的概念的情况下，你可能会这样写它的样式，也就是说使用```ID```来加到div中，从而修饰内容。</span><br></pre></td></tr></table></figure>
+<p>一种可能的css的写法<br>div#featured ul {<br>    margin: 0;<br>    padding: 0;<br>    list-style-type: none;<br>}</p>
+<p>div#featured li {<br>    float: left;<br>    height: 100px;<br>    margin-left: 10px;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">在我们使用这种方法来写样式时，有一些情况条件：</span><br><span class="line">&gt;1.只有一个```featured```栏。</span><br><span class="line">2.```lists```浮动在左边。</span><br><span class="line">3.```lists```有```100pixs```高。</span><br><span class="line"></span><br><span class="line">这些情况条件都是很有可能的。在一些小网站里头都会有这样结构：网站在一段时间里不太会改变或者更加复杂。可能大型网站有更高的几率就重构样式。</span><br><span class="line">我们看到以上的样式代码例子，有很多地方可以做到优化。没必要使用```ID```选择器来限制标签选择器。既然list是子元素，那么可以使用```&gt;```符号。</span><br><span class="line">接下来，我们尝试重写这段代码，让它显得更加灵活。在布局这个角度，我们要知道它的成员之间的关系。我们没必要关心模块本身，也没必要关心这个布局的上下文是如何。</span><br></pre></td></tr></table></figure></p>
+<p>OL 或 UL的样式<br>.l-grid {<br>    margin: 0;<br>    padding: 0;<br>    list-style-type: none;<br>}</p>
+<p>.l-grid &gt; li {<br>    display: inline-block;<br>    margin: 0 0 10px 10px; </p>
+<pre><code>/* IE7 hack to mimic inline-block on block elements */
+*display: inline;
+*zoom: 1;
+</code></pre><p>}</p>
+<p><code>`</code><br>那么这样更改代码后，解决了什么问题呢？（当然不会是100%的解决）。</p>
+<blockquote>
+<p>1.这个栅格布局现在可以用到任何地方去创造一个浮动样式布局。<br>2.我们减少应用深度到1（可以查看应用深度这一章节，查看它的意思）。<br>3.我们减少使用特殊的选择器。<br>4.高度要求被删除，其中特殊高度的行可以增高到最大。</p>
+</blockquote>
+<p>相反的，这样做哪些方面是糟糕的呢？</p>
+<blockquote>
+<p>1.使用的孩子选择器，ie6可能没办法兼容。<br>2.css的变得复杂了，而且代码更多一些。</p>
+</blockquote>
+<p>在代码量上变得更多是很正常的。我们既然可以服用这个模块，同样也可以减少代码。<br>增加复杂性同样也是正常的，我们如果还在关注非常古老的浏览器，可能会遭到白眼。让选择器不那么复杂,也可以来扩展此布局,同时最小化特异性的影响。</p>
+<p>原文地址：<a href="https://smacss.com/" target="_blank" rel="noopener">https://smacss.com/</a></p>
 
       
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css/" rel="tag"># css</a>
+          
+            <a href="/tags/代码模块化/" rel="tag"># 代码模块化</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/03/2018-02-03-可扩展、模块化CSS--模块样式规则/" rel="next" title="可扩展、模块化CSS--模块样式规则">
+                <i class="fa fa-chevron-left"></i> 可扩展、模块化CSS--模块样式规则
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/08/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -730,6 +546,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -750,8 +577,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/WechatIMG13.jpeg"
@@ -866,6 +702,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">Featured</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -990,11 +842,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
 
 
   
@@ -1013,6 +863,18 @@
       <script id="dsq-count-scr" src="https://zivenday-me-1.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://zivenday.github.io/2018/02/03/2018-02-03-可扩展、模块化CSS--布局样式规则/';
+          this.page.identifier = '2018/02/03/2018-02-03-可扩展、模块化CSS--布局样式规则/';
+          this.page.title = '可扩展、模块化CSS--布局样式规则';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://zivenday-me-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   

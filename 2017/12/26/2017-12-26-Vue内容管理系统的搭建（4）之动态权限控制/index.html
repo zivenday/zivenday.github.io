@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="管理系统vue," />
 
 
 
@@ -96,16 +96,22 @@
 
 
 
-<meta name="description" content="愿阳光中是个孩子,风雨中是个大人.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ziven 在说话">
-<meta property="og:url" content="http://zivenday.github.io/archives/index.html">
+<meta name="description" content="文/ziven标题图/stocksnap  什么是权限控制呢？并且权限控制要发生在什么系统，运行什么阶段呢？还有就是长久以来，依照我们的经验，权限控制其实存在于管理系统各个方面、各个组件。因此我们常常会需要不同的权限控制粒度来控制系统，那么vue是如何处理这些不同粒度的权限控制的呢？接下来，本坑依据自己的理解与实际编码过程并且参考相关文章来阐述与解释这些问题和相关议题，有错记得评论告诉本坑哟！">
+<meta name="keywords" content="管理系统vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue内容管理系统的搭建(四)之权限控制">
+<meta property="og:url" content="http://zivenday.github.io/2017/12/26/2017-12-26-Vue内容管理系统的搭建（4）之动态权限控制/index.html">
 <meta property="og:site_name" content="Ziven 在说话">
-<meta property="og:description" content="愿阳光中是个孩子,风雨中是个大人.">
+<meta property="og:description" content="文/ziven标题图/stocksnap  什么是权限控制呢？并且权限控制要发生在什么系统，运行什么阶段呢？还有就是长久以来，依照我们的经验，权限控制其实存在于管理系统各个方面、各个组件。因此我们常常会需要不同的权限控制粒度来控制系统，那么vue是如何处理这些不同粒度的权限控制的呢？接下来，本坑依据自己的理解与实际编码过程并且参考相关文章来阐述与解释这些问题和相关议题，有错记得评论告诉本坑哟！">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4455053-57cf9a0b07a08707.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4455053-45e1fd33dd952e31.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4455053-85be5274fd7b5bfe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-12-27T03:57:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ziven 在说话">
-<meta name="twitter:description" content="愿阳光中是个孩子,风雨中是个大人.">
+<meta name="twitter:title" content="Vue内容管理系统的搭建(四)之权限控制">
+<meta name="twitter:description" content="文/ziven标题图/stocksnap  什么是权限控制呢？并且权限控制要发生在什么系统，运行什么阶段呢？还有就是长久以来，依照我们的经验，权限控制其实存在于管理系统各个方面、各个组件。因此我们常常会需要不同的权限控制粒度来控制系统，那么vue是如何处理这些不同粒度的权限控制的呢？接下来，本坑依据自己的理解与实际编码过程并且参考相关文章来阐述与解释这些问题和相关议题，有错记得评论告诉本坑哟！">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4455053-57cf9a0b07a08707.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -134,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://zivenday.github.io/archives/"/>
+  <link rel="canonical" href="http://zivenday.github.io/2017/12/26/2017-12-26-Vue内容管理系统的搭建（4）之动态权限控制/"/>
 
 
 
 
 
-  <title>归档 | Ziven 在说话</title>
+  <title>Vue内容管理系统的搭建(四)之权限控制 | Ziven 在说话</title>
   
 
 
@@ -175,7 +181,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -313,416 +319,198 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      <span class="archive-page-counter">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zivenday.github.io/2017/12/26/2017-12-26-Vue内容管理系统的搭建（4）之动态权限控制/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ziven 先生">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/WechatIMG13.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ziven 在说话">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">Vue内容管理系统的搭建(四)之权限控制</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-26T00:00:00+08:00">
+                2017-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 20 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端项目记录/" itemprop="url" rel="index">
+                    <span itemprop="name">前端项目记录</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2018">2018</h2>
-          </div>
-        
-        
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/08/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-08T17:23:38+08:00"
-              content="2018-10-08" >
-          10-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--布局样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--布局样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--模块样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--模块样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--基础样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--基础样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--样式的分类和规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--样式的分类和规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--主题样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--主题样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--状态样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--状态样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-          </div>
-        
-        
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（4）之动态权限控制/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/12/26/2017-12-26-Vue内容管理系统的搭建（4）之动态权限控制/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/27/2017-12-27-javascript撸来撸去(1)-事件监听与对象属性/" itemprop="url">
-              
-                <span itemprop="name">javascript撸来撸去(1)-事件监听与对象属性</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-27T00:00:00+08:00"
-              content="2017-12-27" >
-          12-27
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（1）/" itemprop="url">
-              
-                <span itemprop="name">Vue内容管理系统的搭建(一)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-26T00:00:00+08:00"
-              content="2017-12-26" >
-          12-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（6）之服务器配置部署/" itemprop="url">
-              
-                <span itemprop="name">Vue 内容管理系统的搭建(六)之服务器配置部署</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-26T00:00:00+08:00"
-              content="2017-12-26" >
-          12-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p><img src="http://upload-images.jianshu.io/upload_images/4455053-57cf9a0b07a08707.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="权限控制"></p>
+<p>文/ziven<br>标题图/stocksnap</p>
+<blockquote>
+<p>什么是权限控制呢？并且权限控制要发生在什么系统，运行什么阶段呢？还有就是长久以来，依照我们的经验，权限控制其实存在于管理系统各个方面、各个组件。因此我们常常会需要不同的权限控制粒度来控制系统，那么vue是如何处理这些不同粒度的权限控制的呢？接下来，本坑依据自己的理解与实际编码过程并且参考相关文章来阐述与解释这些问题和相关议题，有错记得评论告诉本坑哟！</p>
+</blockquote>
+<h6 id="动态权限控制粒度"><a href="#动态权限控制粒度" class="headerlink" title="动态权限控制粒度"></a>动态权限控制粒度</h6><blockquote>
+<p>权限控制在过去的时代，大多是后台进行处理的,通过数据库的数据来配置并且用于查询用户的权限，通过对jsp，html进行条件显示或者重定向来显现一个角色的权限，然而既然是过去的时代就是已经过去了。前后端分离意味着两者特别是前者有更多的自由度，而后台无法直接的介入。那么现在，权限控制要交给谁控制更好呢呢？仔细想想不管谁控制，其目的是一样一样的，都是为了同一个目的。为了解决前端的需求，比如路由条件显示，前端会自己进行权限控制，这些后台是做不来的。而后台往往会因为安全性，也进行控制。既然为了同一个目的，在实际操作的大多数情况下是各自都会在各自的领域内进行控制，有时候可能是重复的，但并不会因此造成困扰或者说对系统造成压力。</p>
+</blockquote>
+<p> 在我们经常遇到的管理系统往往都是有很多角色的，比如说一般用户和管理员两个角色。我们的管理系统也往往有这样的需求：不同角色显示不同的内容。比如说每个角色导航栏是不一样的、同一个页面按钮不同角色可见或不可见等等。所以大致可以看到两种粒度：一个是导航方向上的权限控制，它控制的是不同角色显示不同的功能模块；一个是小一点的组件上的控制，就是前面所说，不同角色显示或不显示，可点击或不可点击等等。<br>对应vue来说，我们往往对小范围的组件的权限控制采用v-if或v-show来控制，实践证明这是最方便与好理解的方法。所以这个层级就没有什么好聊的了，本坑要聊的是后者。功能模块的权限控制，比如不同角色显示不同的导航栏如何做呢？还用v-if？那路由信息又如何做呢？显然这种方式用到导航栏的控制是不科学的。<br>幸运的是<a href="https://router.vuejs.org/zh-cn/advanced/meta.html" target="_blank" rel="noopener">官方文档</a>提到了路由元信息meta 字段可以用于权限的控制，官方的例子显示它可以用来控制用户是否有权限进入当前路由。它的作用在于比对，通过比对来形成控制权限，相同meta的路由形成一个角色的权限范围。同样的从官方的<a href="https://router.vuejs.org/zh-cn/api/router-instance.html" target="_blank" rel="noopener">API</a>的addRouters()可以手动添加路由，这样的话，我们要做的是写一个方法，这个方法通过比对meta信息,收集同样类型的路由，然后addRouters到现在的路由里，形成目前访问的导航权限范围，达到控制功能访问的目的。这整个过程发生在哪里？在我们进入主页面之前，登录操作之后。</p>
+<h6 id="权限控制的实现"><a href="#权限控制的实现" class="headerlink" title="权限控制的实现"></a>权限控制的实现</h6><p>我们首先要实现的目的是用户登录后，通过判断用户角色类型，然后收集该角色可访问的路由，通过addRoutes加到路由当中，最后作为数据渲染到导航栏里。<br>本坑开发的<a href="https://github.com/githubziven/font" target="_blank" rel="noopener">express系统</a>中，用户登录后可以获得用户信息的内容有名字、token、角色类型。系统有两种登录方式，一个是用户名登录，第二个是第三方授权登录。前者的角色类型是1，后者的类型是2。1代表管理员，2代表普通用户。脚本<a href="https://github.com/githubziven/font/blob/master/src/main.js" target="_blank" rel="noopener">main.js</a>可以看到路由跳转前的逻辑处理。其中加入了路由收集和载入到vue-router中。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4455053-45e1fd33dd952e31.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="登录后存放在cookie的用户信息"></p>
+<p>那么路由信息怎么收集呢？导航栏组件如何根据收集信息生成正确渲染呢？<br>我们需要给路由属性添加一些额外信息，各位看官根据实际需求来做，解决问题怎样都行。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4455053-85be5274fd7b5bfe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="路由信息属性"><br>为了收集路由信息，本坑在脚本中<a href="https://github.com/githubziven/font/blob/master/src/store/permission.js" target="_blank" rel="noopener">permisson.js</a> 添加GetPermissionRouter方法来实现，所有的路由信息保存在state中。<br>通过自定义子组件<a href="https://github.com/githubziven/font/blob/master/src/views/Main/SideMenu.vue" target="_blank" rel="noopener">sideMenu.vue</a>来动态生成导航组件。</p>
+<p>好了，Vue内容管理系统的搭建系列文章到这篇就大体上要加个小暂停了。后续本坑将完善系统的前端整理，UI美化，也会把后台代码部署到云服务器中，这样可以实际运行整个前后端系统。如果这些系列文章对您有一丝丝帮助，点个赞，一起加油。</p>
+<p>本坑系列文章：<br><a href="http://www.jianshu.com/p/afbdd1afc732" target="_blank" rel="noopener">Vue 内容管理系统的搭建（一）</a><br><a href="http://www.jianshu.com/p/7b7d71680155" target="_blank" rel="noopener">Vue 内容管理系统的搭建（二）</a><br><a href="http://www.jianshu.com/p/9a29c2623eb8" target="_blank" rel="noopener">Vue内容管理系统的搭建（三）</a><br><a href="http://www.jianshu.com/p/98b2bbd81f68" target="_blank" rel="noopener">Vue内容管理系统的搭建(四)之第三方授权与验证</a><br>参考文章<br><a href="https://juejin.im/entry/58f47b26a0bb9f006aa5476f" target="_blank" rel="noopener">手摸手，带你用vue撸后台 系列二(登录权限篇)</a></p>
 
       
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/管理系统vue/" rel="tag"># 管理系统vue</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/04/2017-12-04-margin-top奇异现象/" rel="next" title="margin-top奇异现象">
+                <i class="fa fa-chevron-left"></i> margin-top奇异现象
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（5）之第三方授权/" rel="prev" title="Vue内容管理系统的搭建(五)之第三方授权">
+                Vue内容管理系统的搭建(五)之第三方授权 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -730,6 +518,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -750,8 +549,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/WechatIMG13.jpeg"
@@ -866,6 +674,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#动态权限控制粒度"><span class="nav-number">1.</span> <span class="nav-text">动态权限控制粒度</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#权限控制的实现"><span class="nav-number">2.</span> <span class="nav-text">权限控制的实现</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -990,11 +814,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
 
 
   
@@ -1013,6 +835,18 @@
       <script id="dsq-count-scr" src="https://zivenday-me-1.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://zivenday.github.io/2017/12/26/2017-12-26-Vue内容管理系统的搭建（4）之动态权限控制/';
+          this.page.identifier = '2017/12/26/2017-12-26-Vue内容管理系统的搭建（4）之动态权限控制/';
+          this.page.title = 'Vue内容管理系统的搭建(四)之权限控制';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://zivenday-me-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   

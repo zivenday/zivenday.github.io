@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="node,反向代理," />
 
 
 
@@ -96,16 +96,20 @@
 
 
 
-<meta name="description" content="愿阳光中是个孩子,风雨中是个大人.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ziven 在说话">
-<meta property="og:url" content="http://zivenday.github.io/archives/index.html">
+<meta name="description" content="文/ziven标题图/来自网络  前后端分离是个很重要的概念，尤其是今天的大前端时代。jsp，html嵌套在java web项目中似乎显得比较古老而厚重。当我们处在前后端分离开发的阶段时，如何更科学的分工合作便是一个挑战，因为后台们已经不在是整个项目的中心，前端有更大的自由度，逻辑处理慢慢在前端就进行处理。其中前后端跨域访问，接口数据访问规范便是要处理的课题。本坑在本文中针对前后端分离的情况下如何">
+<meta name="keywords" content="node,反向代理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前后端分离--拿起node反向代理的武器（全记录）">
+<meta property="og:url" content="http://zivenday.github.io/2017/12/26/2017-12-26-前后端分离--拿起node反向代理的武器（全记录）/index.html">
 <meta property="og:site_name" content="Ziven 在说话">
-<meta property="og:description" content="愿阳光中是个孩子,风雨中是个大人.">
+<meta property="og:description" content="文/ziven标题图/来自网络  前后端分离是个很重要的概念，尤其是今天的大前端时代。jsp，html嵌套在java web项目中似乎显得比较古老而厚重。当我们处在前后端分离开发的阶段时，如何更科学的分工合作便是一个挑战，因为后台们已经不在是整个项目的中心，前端有更大的自由度，逻辑处理慢慢在前端就进行处理。其中前后端跨域访问，接口数据访问规范便是要处理的课题。本坑在本文中针对前后端分离的情况下如何">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4455053-6f18798fda6ebd16.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-10-11T09:55:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ziven 在说话">
-<meta name="twitter:description" content="愿阳光中是个孩子,风雨中是个大人.">
+<meta name="twitter:title" content="前后端分离--拿起node反向代理的武器（全记录）">
+<meta name="twitter:description" content="文/ziven标题图/来自网络  前后端分离是个很重要的概念，尤其是今天的大前端时代。jsp，html嵌套在java web项目中似乎显得比较古老而厚重。当我们处在前后端分离开发的阶段时，如何更科学的分工合作便是一个挑战，因为后台们已经不在是整个项目的中心，前端有更大的自由度，逻辑处理慢慢在前端就进行处理。其中前后端跨域访问，接口数据访问规范便是要处理的课题。本坑在本文中针对前后端分离的情况下如何">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4455053-6f18798fda6ebd16.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -134,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://zivenday.github.io/archives/"/>
+  <link rel="canonical" href="http://zivenday.github.io/2017/12/26/2017-12-26-前后端分离--拿起node反向代理的武器（全记录）/"/>
 
 
 
 
 
-  <title>归档 | Ziven 在说话</title>
+  <title>前后端分离--拿起node反向代理的武器（全记录） | Ziven 在说话</title>
   
 
 
@@ -175,7 +179,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -313,416 +317,203 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      <span class="archive-page-counter">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zivenday.github.io/2017/12/26/2017-12-26-前后端分离--拿起node反向代理的武器（全记录）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ziven 先生">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/WechatIMG13.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ziven 在说话">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">前后端分离--拿起node反向代理的武器（全记录）</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-26T00:00:00+08:00">
+                2017-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 20 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/node/" itemprop="url" rel="index">
+                    <span itemprop="name">node</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2018">2018</h2>
-          </div>
-        
-        
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/08/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-08T17:23:38+08:00"
-              content="2018-10-08" >
-          10-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--布局样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--布局样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--模块样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--模块样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--基础样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--基础样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--样式的分类和规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--样式的分类和规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--主题样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--主题样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--状态样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--状态样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-          </div>
-        
-        
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/12/26/2017-12-26-前后端分离--拿起node反向代理的武器（全记录）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/12/26/2017-12-26-前后端分离--拿起node反向代理的武器（全记录）/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/27/2017-12-27-javascript撸来撸去(1)-事件监听与对象属性/" itemprop="url">
-              
-                <span itemprop="name">javascript撸来撸去(1)-事件监听与对象属性</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-27T00:00:00+08:00"
-              content="2017-12-27" >
-          12-27
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（1）/" itemprop="url">
-              
-                <span itemprop="name">Vue内容管理系统的搭建(一)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-26T00:00:00+08:00"
-              content="2017-12-26" >
-          12-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（6）之服务器配置部署/" itemprop="url">
-              
-                <span itemprop="name">Vue 内容管理系统的搭建(六)之服务器配置部署</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-26T00:00:00+08:00"
-              content="2017-12-26" >
-          12-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p><img src="http://upload-images.jianshu.io/upload_images/4455053-6f18798fda6ebd16.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="做个勇往直前的人，做个勇往直前的前端"><br>文/ziven<br>标题图/来自网络</p>
+<blockquote>
+<p>前后端分离是个很重要的概念，尤其是今天的大前端时代。jsp，html嵌套在java web项目中似乎显得比较古老而厚重。当我们处在前后端分离开发的阶段时，如何更科学的分工合作便是一个挑战，因为后台们已经不在是整个项目的中心，前端有更大的自由度，逻辑处理慢慢在前端就进行处理。其中前后端跨域访问，接口数据访问规范便是要处理的课题。本坑在本文中针对前后端分离的情况下如何使用反向代理来解决以上问题的开发过程进行记录。文章内容有错记得评论告诉本坑哟。</p>
+</blockquote>
+<p>######反向代理和正向代理</p>
+<blockquote>
+<p>代理对于中国人来说真的是太熟悉不过了，如果你想到外面的’百果园’看看，你就得需要所谓的vpn。大多数体验 过vpn上网的就知道代理起到什么样的作用。好了，就是外面有很多的‘你懂得’。</p>
+</blockquote>
+<p>前面说到反向代理，那么正向代理和它有什么区别呢？用一句话来概括，就是正向代理代理的是客户端，而反向代理代理的是服务器端。通过这样一句话，还是不理解是不是？再用一句话来解释这句话。正向代理让服务端不知道谁在请求服务，而反向代理让客户端不知道服务来自哪里。<br>用一个比喻，滴滴打车app就是一个‘反向代理’的例子，因为在打车时，我们不知道哪量车来服务我们，我们只要点击打车按钮就是了，滴滴打车告诉我们车牌号是因为消费者要知道提供服务者是谁，以便提高服务体验，维权等等。一个访问，一个请求很显然，不知道提供服务是谁是可以的。<br> 当然这是概念上的区分，具体机制上他们也有区别，Google一下吧，这里不在赘述。</p>
+<p>######nodejs的反向代理<br>除了Nginx为反向代理而设计，nodejs神器也可以做到，不过它不是为代理而生的。npm有很多专门用于http链接代理的中间件，在本坑的开发过程中用到http-proxy-middle ，http-proxy。这两个插件我都尝试进行代理功能的实现，但是前者我没有成功，后者成功了。在很多网上的教程里头也提到，nodejs可以通过代理来处理负载均衡的问题。是不是感觉nodejs要飞上天了，反正我觉得确实。</p>
+<p>######设置和使用反向代理</p>
+<blockquote>
+<p>本坑开发的是一个古老的管理平台的初始版本，前端是html的聚合，后台是java web，管理平台需要登录后才能查询数据，并且每次查询数据都要对登录角色进行授权。那么问题来了，一个个html如何访问后台数据呢？而且要方便的使用后台数据呢？后台的大神们可是不会开心的帮你的。</p>
+</blockquote>
+<p> 我们要处理的东西就是需要用nodejs写个脚本，来运行本地html，css等等的静态文件，而ajax请求就被代理到目标服务器中去，从而获取一系列的数据。<br>如前面所说，本坑用的反向代理插件是http-proxy。没有的需要先npm安装这个插件。<br>综合来说，重点是写一个服务器脚本。脚本的主要功能就是运行本地文件和代理ajax请求到目标ip去。还有一个重点就是保持sessionid一致。为什么呢，因为后台是通过通过sessionid是否一致来判断是否是同一个用户。如果不是，Tomcat会因为连接会话不同重新生成一个jsessionid，因为id不同，后台认为用户没有登录，就会被禁止访问，需要重新登录，当然重新登录以后，还是id会变动，依然不能访问。没有这部分需求的，就没有必要把sessionid保持一致写到代理中。所有的这些逻辑都写在了proxy.js中。注意了，本坑的本地文件和proxy.js的位置是同一个目录下，当然，目录可以自己设置在哪儿。<br>proxy.js代码传送门：</p>
+<p><pre> <a href="https://github.com/githubziven/express-proxy/blob/master/proxy.js" target="_blank" rel="noopener">https://github.com/githubziven/express-proxy/blob/master/proxy.js</a></pre><br>运行写好的脚本指令：</p>
+<p><pre>supervisor proxy.js</pre><br>到这里，本坑的系统首先需要登录，浏览器输入127.0.0.1：8001/login.html，登录(登录也是代理过去)后就能得到反向代理后得到数据了，再也不用问后台大神们要后台数据了。</p>
+<p>######跨域小疑问<br>为什么反向代理可以解决前端们苦恼的跨域呢？对于不允许跨域访问的目标服务器来说，代理服务器必须要与目标服务器放到同一个域名下。这样代理才是有效的。对于允许跨域访问的目标服务器来说，为什么我们还需要反向代理呢？因为浏览器有跨域限制。XmlHttpRequest只允许请求当前源（域名、协议、端口）的资源，所以Ajax是不允许跨域的。利用反向代理后，当Ajax访问本地服务器时，它被转发到目标服务器，对于浏览器来说，它并不知道目标服务器的存在，就好像访问自己的服务器的资源一样，就没有跨域了。<br>好了，回过头来看看整个过程，是不是发现还是很轻松的，简简单单的几段js代码就能代理请求。不管是轻松还是不轻松，终究我们更了解了反向代理。</p>
 
       
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/node/" rel="tag"># node</a>
+          
+            <a href="/tags/反向代理/" rel="tag"># 反向代理</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（5）之第三方授权/" rel="next" title="Vue内容管理系统的搭建(五)之第三方授权">
+                <i class="fa fa-chevron-left"></i> Vue内容管理系统的搭建(五)之第三方授权
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（3）/" rel="prev" title="Vue内容管理系统的搭建(三)">
+                Vue内容管理系统的搭建(三) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -730,6 +521,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -990,11 +792,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
 
 
   
@@ -1013,6 +813,18 @@
       <script id="dsq-count-scr" src="https://zivenday-me-1.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://zivenday.github.io/2017/12/26/2017-12-26-前后端分离--拿起node反向代理的武器（全记录）/';
+          this.page.identifier = '2017/12/26/2017-12-26-前后端分离--拿起node反向代理的武器（全记录）/';
+          this.page.title = '前后端分离--拿起node反向代理的武器（全记录）';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://zivenday-me-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   

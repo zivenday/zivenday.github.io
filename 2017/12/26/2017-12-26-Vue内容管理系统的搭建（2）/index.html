@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="管理系统vue," />
 
 
 
@@ -96,16 +96,22 @@
 
 
 
-<meta name="description" content="愿阳光中是个孩子,风雨中是个大人.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ziven 在说话">
-<meta property="og:url" content="http://zivenday.github.io/archives/index.html">
+<meta name="description" content="上篇，把前端项目搭建好，接下来就是express的任务了github托管的代码地址： https://github.com/githubziven/service同样，从官网出发。传送门： http://www.expressjs.com.cn/按照指引就可以轻松的把express api搭好。如果你的hello express得到成功的呈现，那么又成功了一步。这里官网都有，本坑带过了。除此之外，">
+<meta name="keywords" content="管理系统vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue内容管理系统的搭建(二)">
+<meta property="og:url" content="http://zivenday.github.io/2017/12/26/2017-12-26-Vue内容管理系统的搭建（2）/index.html">
 <meta property="og:site_name" content="Ziven 在说话">
-<meta property="og:description" content="愿阳光中是个孩子,风雨中是个大人.">
+<meta property="og:description" content="上篇，把前端项目搭建好，接下来就是express的任务了github托管的代码地址： https://github.com/githubziven/service同样，从官网出发。传送门： http://www.expressjs.com.cn/按照指引就可以轻松的把express api搭好。如果你的hello express得到成功的呈现，那么又成功了一步。这里官网都有，本坑带过了。除此之外，">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4455053-9600f1d41fe7065d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4455053-b9b375b4189f4d31.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4455053-ff2083b60dea3f5f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-12-27T03:57:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ziven 在说话">
-<meta name="twitter:description" content="愿阳光中是个孩子,风雨中是个大人.">
+<meta name="twitter:title" content="Vue内容管理系统的搭建(二)">
+<meta name="twitter:description" content="上篇，把前端项目搭建好，接下来就是express的任务了github托管的代码地址： https://github.com/githubziven/service同样，从官网出发。传送门： http://www.expressjs.com.cn/按照指引就可以轻松的把express api搭好。如果你的hello express得到成功的呈现，那么又成功了一步。这里官网都有，本坑带过了。除此之外，">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4455053-9600f1d41fe7065d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -134,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://zivenday.github.io/archives/"/>
+  <link rel="canonical" href="http://zivenday.github.io/2017/12/26/2017-12-26-Vue内容管理系统的搭建（2）/"/>
 
 
 
 
 
-  <title>归档 | Ziven 在说话</title>
+  <title>Vue内容管理系统的搭建(二) | Ziven 在说话</title>
   
 
 
@@ -175,7 +181,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -313,416 +319,197 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      <span class="archive-page-counter">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zivenday.github.io/2017/12/26/2017-12-26-Vue内容管理系统的搭建（2）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ziven 先生">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/WechatIMG13.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ziven 在说话">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">Vue内容管理系统的搭建(二)</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-26T00:00:00+08:00">
+                2017-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 20 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端项目记录/" itemprop="url" rel="index">
+                    <span itemprop="name">前端项目记录</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2018">2018</h2>
-          </div>
-        
-        
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/08/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-08T17:23:38+08:00"
-              content="2018-10-08" >
-          10-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--布局样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--布局样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--模块样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--模块样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--基础样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--基础样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--样式的分类和规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--样式的分类和规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--主题样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--主题样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--状态样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--状态样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-          </div>
-        
-        
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（2）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/12/26/2017-12-26-Vue内容管理系统的搭建（2）/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/27/2017-12-27-javascript撸来撸去(1)-事件监听与对象属性/" itemprop="url">
-              
-                <span itemprop="name">javascript撸来撸去(1)-事件监听与对象属性</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-27T00:00:00+08:00"
-              content="2017-12-27" >
-          12-27
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（1）/" itemprop="url">
-              
-                <span itemprop="name">Vue内容管理系统的搭建(一)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-26T00:00:00+08:00"
-              content="2017-12-26" >
-          12-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（6）之服务器配置部署/" itemprop="url">
-              
-                <span itemprop="name">Vue 内容管理系统的搭建(六)之服务器配置部署</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-26T00:00:00+08:00"
-              content="2017-12-26" >
-          12-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>上篇，把前端项目搭建好，接下来就是express的任务了<br>github托管的代码地址：</p>
+<p><pre><br><a href="https://github.com/githubziven/service" target="_blank" rel="noopener">https://github.com/githubziven/service</a><br></pre><br>同样，从官网出发。传送门：</p>
+<p><pre><br><a href="http://www.expressjs.com.cn/" target="_blank" rel="noopener">http://www.expressjs.com.cn/</a><br></pre><br>按照指引就可以轻松的把express api搭好。<br>如果你的hello express得到成功的呈现，那么又成功了一步。这里官网都有，本坑带过了。<br>除此之外，本坑顺带安装supervisor，它的好处就是能提高调试的效率，一旦代码得到保存，会自动重启，更新。</p>
+<p>添加login.js处理登录请求<br>项目结构：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4455053-9600f1d41fe7065d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>在测试前当然要添加mysql支持 ，用navcat或者命令行把数据库表建好，这里比较简单，user对象就两个属性，一个是name 一个是password 本坑设置了name是111 密码是111.<br>login.js是包括对数据库的配置，编码前记得要安装mysql依赖。<br> login.js</p>
+<p><pre><br>var express = require(‘express’);<br>var mysql = require(‘mysql’);<br>var connection = mysql.createConnection({<br>host: ‘localhost’,<br>user: ‘root’,<br>password: ‘123456’,<br>database: ‘very’<br>});<br>connection.connect();<br>var router = express.Router();<br>/<em> GET users listing. </em>/<br>router.post(‘/‘, function(req, res, next) {<br>var _user = req.body;<br>console.log(_user.name);<br>console.log(_user.password);<br>var name = connection.escape(_user.name);<br>var pwd = connection.escape(_user.password);<br>var sql = ‘SELECT  * FROM user WHERE name =’ + name + ‘ AND password=’ + pwd;<br>connection.query(sql, function(err, rows, fields) {<br>if (err){<br>throw err<br>}<br>else {<br>console.log(rows.length);<br>if (rows.length &gt; 0) {<br>res.json({ ‘code’: 1,message:’登录成功！’})<br>} else {<br>res.json({ ‘code’: 0,message:’用户名或密码错误！’ })<br>}<br>}<br>});<br>})<br></pre><br>安装完以后就可以用supervisor 来启动服务了。</p>
+<p><pre><br>   supervisor   app.js<br></pre><br>或者 </p>
+<p><pre><br>   supervisor    bin/www<br></pre><br>点击登录，正如所料<br><img src="http://upload-images.jianshu.io/upload_images/4455053-b9b375b4189f4d31.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>登录错误</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4455053-ff2083b60dea3f5f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>   这里要特别注意的就是因为前后端分离打包部署，端口不一样，前端向后端请求时，这时浏览器会提示存在着跨域的问题。这是因为发送post请求之前，会先发一个option查询请求给服务器，如果这个option请求无法得到正常回应，后面的post请求当然也不会发送了。不太了解这个机制的可以看看阮一峰大师的一篇文章，传送门在此</p>
+<p><pre><br><a href="http://www.ruanyifeng.com/blog/2016/04/cors.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2016/04/cors.html</a>.<br></pre><br>要解决这个问题的方法有几个。一个就送json改成jsonp,还有一种就是在app.js里添加以下代码：</p>
+<p><pre><br>//allow custom header and CORS<br>app.all(‘<em>‘,function (req, res, next) {<br>res.header(‘Access-Control-Allow-Origin’, ‘</em>‘);<br>res.header(‘Access-Control-Allow-Headers’, ‘Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild’);<br>res.header(‘Access-Control-Allow-Methods’, ‘PUT, POST, GET, DELETE, OPTIONS’);<br>if (req.method == ‘OPTIONS’) {<br>res.send(200); /让options请求快速返回/<br>}<br>else {<br>next();<br>}<br>});<br></pre><br>目的就是让option查询请求轻松无阻碍的得到回应。当然还有其他方法了，这里不说了。<br>基本的登录就是这样了，后面本坑将继续分享我的学习过程。</p>
 
       
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/管理系统vue/" rel="tag"># 管理系统vue</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（3）/" rel="next" title="Vue内容管理系统的搭建(三)">
+                <i class="fa fa-chevron-left"></i> Vue内容管理系统的搭建(三)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（6）之服务器配置部署/" rel="prev" title="Vue 内容管理系统的搭建(六)之服务器配置部署">
+                Vue 内容管理系统的搭建(六)之服务器配置部署 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -730,6 +517,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -990,11 +788,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
 
 
   
@@ -1013,6 +809,18 @@
       <script id="dsq-count-scr" src="https://zivenday-me-1.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://zivenday.github.io/2017/12/26/2017-12-26-Vue内容管理系统的搭建（2）/';
+          this.page.identifier = '2017/12/26/2017-12-26-Vue内容管理系统的搭建（2）/';
+          this.page.title = 'Vue内容管理系统的搭建(二)';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://zivenday-me-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   

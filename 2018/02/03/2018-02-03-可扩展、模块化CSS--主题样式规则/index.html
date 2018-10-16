@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="css,代码模块化," />
 
 
 
@@ -96,16 +96,20 @@
 
 
 
-<meta name="description" content="愿阳光中是个孩子,风雨中是个大人.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ziven 在说话">
-<meta property="og:url" content="http://zivenday.github.io/archives/index.html">
+<meta name="description" content="很多项目可能并不需要主题这个样式，因为并不是样式的核心。然而一些网站是需要的，比如雅虎邮箱。  ######主题把主题定义为网站或者APP需要看的颜色和图也许是很自然的。所以单独的把主题分开来进行选择和使用是很好的。主题会影响原始布局，和默认样式一样的渲染页面，并且它覆盖基本颜色。改变基本颜色，改变整个感官。现在假如说你有一个对话模块，它需要一个蓝色边框。模块本身初始会有一个边框样式，主题定义">
+<meta name="keywords" content="css,代码模块化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="可扩展、模块化CSS--主题样式规则">
+<meta property="og:url" content="http://zivenday.github.io/2018/02/03/2018-02-03-可扩展、模块化CSS--主题样式规则/index.html">
 <meta property="og:site_name" content="Ziven 在说话">
-<meta property="og:description" content="愿阳光中是个孩子,风雨中是个大人.">
+<meta property="og:description" content="很多项目可能并不需要主题这个样式，因为并不是样式的核心。然而一些网站是需要的，比如雅虎邮箱。  ######主题把主题定义为网站或者APP需要看的颜色和图也许是很自然的。所以单独的把主题分开来进行选择和使用是很好的。主题会影响原始布局，和默认样式一样的渲染页面，并且它覆盖基本颜色。改变基本颜色，改变整个感官。现在假如说你有一个对话模块，它需要一个蓝色边框。模块本身初始会有一个边框样式，主题定义">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4455053-f90e39856d027ef0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-10-11T09:54:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ziven 在说话">
-<meta name="twitter:description" content="愿阳光中是个孩子,风雨中是个大人.">
+<meta name="twitter:title" content="可扩展、模块化CSS--主题样式规则">
+<meta name="twitter:description" content="很多项目可能并不需要主题这个样式，因为并不是样式的核心。然而一些网站是需要的，比如雅虎邮箱。  ######主题把主题定义为网站或者APP需要看的颜色和图也许是很自然的。所以单独的把主题分开来进行选择和使用是很好的。主题会影响原始布局，和默认样式一样的渲染页面，并且它覆盖基本颜色。改变基本颜色，改变整个感官。现在假如说你有一个对话模块，它需要一个蓝色边框。模块本身初始会有一个边框样式，主题定义">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4455053-f90e39856d027ef0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -134,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://zivenday.github.io/archives/"/>
+  <link rel="canonical" href="http://zivenday.github.io/2018/02/03/2018-02-03-可扩展、模块化CSS--主题样式规则/"/>
 
 
 
 
 
-  <title>归档 | Ziven 在说话</title>
+  <title>可扩展、模块化CSS--主题样式规则 | Ziven 在说话</title>
   
 
 
@@ -175,7 +179,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -313,416 +317,204 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      <span class="archive-page-counter">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zivenday.github.io/2018/02/03/2018-02-03-可扩展、模块化CSS--主题样式规则/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ziven 先生">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/WechatIMG13.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ziven 在说话">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">可扩展、模块化CSS--主题样式规则</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-03T00:00:00+08:00">
+                2018-02-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 20 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
 
-      
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
+                  </a>
+                </span>
 
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2018">2018</h2>
-          </div>
-        
-        
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/08/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-08T17:23:38+08:00"
-              content="2018-10-08" >
-          10-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--布局样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--布局样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--模块样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--模块样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--基础样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--基础样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--样式的分类和规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--样式的分类和规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--主题样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--主题样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--状态样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--状态样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-          </div>
-        
-        
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/02/03/2018-02-03-可扩展、模块化CSS--主题样式规则/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/02/03/2018-02-03-可扩展、模块化CSS--主题样式规则/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/27/2017-12-27-javascript撸来撸去(1)-事件监听与对象属性/" itemprop="url">
-              
-                <span itemprop="name">javascript撸来撸去(1)-事件监听与对象属性</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-27T00:00:00+08:00"
-              content="2017-12-27" >
-          12-27
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（1）/" itemprop="url">
-              
-                <span itemprop="name">Vue内容管理系统的搭建(一)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-26T00:00:00+08:00"
-              content="2017-12-26" >
-          12-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（6）之服务器配置部署/" itemprop="url">
-              
-                <span itemprop="name">Vue 内容管理系统的搭建(六)之服务器配置部署</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-26T00:00:00+08:00"
-              content="2017-12-26" >
-          12-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p><img src="http://upload-images.jianshu.io/upload_images/4455053-f90e39856d027ef0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="SMACSS is becoming one of the most useful contributions to front-end discussions in years"></p>
+<blockquote>
+<p>很多项目可能并不需要主题这个样式，因为并不是样式的核心。然而一些网站是需要的，比如雅虎邮箱。</p>
+</blockquote>
+<p>######主题<br>把主题定义为网站或者APP需要看的颜色和图也许是很自然的。所以单独的把主题分开来进行选择和使用是很好的。<br>主题会影响原始布局，和默认样式一样的渲染页面，并且它覆盖基本颜色。改变基本颜色，改变整个感官。<br>现在假如说你有一个对话模块，它需要一个蓝色边框。模块本身初始会有一个边框样式，主题定义它的颜色。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.mod &#123;</span><br><span class="line">    border: 1px solid;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// in theme.css</span><br><span class="line">.mod &#123;</span><br><span class="line">    border-color: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>主题可以有类名，它清晰的指出，元素应该是怎么样的。只要我们把主题分离的够好就会更多样。像雅虎邮箱就有超过50种主题文件来综合各种想要的颜色和图片。</p>
+<p>######排印<br>最后但不是最重要的，有一个字体样式，类似于主题。有些时候你需要大范围的重新定义正在使用的字体并且国际化等。中国和韩国等地区复杂的表意文字,是难以阅读小字体大小。因此,我们为每个地区创建单独的字体文件,重新定义这些组件的字体大小。字体规则通常会影响基础模块和风格。字体样式通常不会被指定在布局层次布局用于定位和布局,风格变化不像字体和颜色。像主题文件,可能没有实际需要定义字体类(如f-large)。你的网站应该只有3到6不同的字体。如果你有超过6字体大小宣布在您的项目中,您的用户可能不会注意到你的网站，也更难维护。</p>
+<p>原文地址：<a href="https://smacss.com/" target="_blank" rel="noopener">https://smacss.com/</a></p>
 
       
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css/" rel="tag"># css</a>
+          
+            <a href="/tags/代码模块化/" rel="tag"># 代码模块化</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/03/2018-02-03-可扩展、模块化CSS--状态样式规则/" rel="next" title="可扩展、模块化CSS--状态样式规则">
+                <i class="fa fa-chevron-left"></i> 可扩展、模块化CSS--状态样式规则
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/03/2018-02-03-可扩展、模块化CSS--样式的分类和规则/" rel="prev" title="可扩展、模块化CSS--样式的分类和规则">
+                可扩展、模块化CSS--样式的分类和规则 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -730,6 +522,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -990,11 +793,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
 
 
   
@@ -1013,6 +814,18 @@
       <script id="dsq-count-scr" src="https://zivenday-me-1.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://zivenday.github.io/2018/02/03/2018-02-03-可扩展、模块化CSS--主题样式规则/';
+          this.page.identifier = '2018/02/03/2018-02-03-可扩展、模块化CSS--主题样式规则/';
+          this.page.title = '可扩展、模块化CSS--主题样式规则';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://zivenday-me-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   

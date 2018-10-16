@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="管理系统vue," />
 
 
 
@@ -96,16 +96,18 @@
 
 
 
-<meta name="description" content="愿阳光中是个孩子,风雨中是个大人.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ziven 在说话">
-<meta property="og:url" content="http://zivenday.github.io/archives/index.html">
+<meta name="description" content="购买服务器部署个人项目是很多前端开发人员特别是刚开始进入行业的人士都很想去做但是又厌倦服务器繁琐配置的一件事(现在有些已经帮你搞好所有了)。本坑开始也是这样想的，既不太明白Linux 也不太清楚Ubuntu以及其他服务器知识内容。然而…….好了，又要提一下前端工作的历史变迁了。在以前万万千千的日子里，前端与页面设计傻傻分不清，紧接着前端要贯通js技术，js库，里面涉及到数据结构逻辑以及其他技术分">
+<meta name="keywords" content="管理系统vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue 内容管理系统的搭建(六)之服务器配置部署">
+<meta property="og:url" content="http://zivenday.github.io/2017/12/26/2017-12-26-Vue内容管理系统的搭建（6）之服务器配置部署/index.html">
 <meta property="og:site_name" content="Ziven 在说话">
-<meta property="og:description" content="愿阳光中是个孩子,风雨中是个大人.">
+<meta property="og:description" content="购买服务器部署个人项目是很多前端开发人员特别是刚开始进入行业的人士都很想去做但是又厌倦服务器繁琐配置的一件事(现在有些已经帮你搞好所有了)。本坑开始也是这样想的，既不太明白Linux 也不太清楚Ubuntu以及其他服务器知识内容。然而…….好了，又要提一下前端工作的历史变迁了。在以前万万千千的日子里，前端与页面设计傻傻分不清，紧接着前端要贯通js技术，js库，里面涉及到数据结构逻辑以及其他技术分">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-27T03:57:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ziven 在说话">
-<meta name="twitter:description" content="愿阳光中是个孩子,风雨中是个大人.">
+<meta name="twitter:title" content="Vue 内容管理系统的搭建(六)之服务器配置部署">
+<meta name="twitter:description" content="购买服务器部署个人项目是很多前端开发人员特别是刚开始进入行业的人士都很想去做但是又厌倦服务器繁琐配置的一件事(现在有些已经帮你搞好所有了)。本坑开始也是这样想的，既不太明白Linux 也不太清楚Ubuntu以及其他服务器知识内容。然而…….好了，又要提一下前端工作的历史变迁了。在以前万万千千的日子里，前端与页面设计傻傻分不清，紧接着前端要贯通js技术，js库，里面涉及到数据结构逻辑以及其他技术分">
 
 
 
@@ -134,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://zivenday.github.io/archives/"/>
+  <link rel="canonical" href="http://zivenday.github.io/2017/12/26/2017-12-26-Vue内容管理系统的搭建（6）之服务器配置部署/"/>
 
 
 
 
 
-  <title>归档 | Ziven 在说话</title>
+  <title>Vue 内容管理系统的搭建(六)之服务器配置部署 | Ziven 在说话</title>
   
 
 
@@ -175,7 +177,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -313,416 +315,217 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      <span class="archive-page-counter">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zivenday.github.io/2017/12/26/2017-12-26-Vue内容管理系统的搭建（6）之服务器配置部署/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ziven 先生">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/WechatIMG13.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ziven 在说话">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">Vue 内容管理系统的搭建(六)之服务器配置部署</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-26T00:00:00+08:00">
+                2017-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 20 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端项目记录/" itemprop="url" rel="index">
+                    <span itemprop="name">前端项目记录</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2018">2018</h2>
-          </div>
-        
-        
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/08/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-08T17:23:38+08:00"
-              content="2018-10-08" >
-          10-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--布局样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--布局样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--模块样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--模块样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--基础样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--基础样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--样式的分类和规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--样式的分类和规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--主题样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--主题样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/03/2018-02-03-可扩展、模块化CSS--状态样式规则/" itemprop="url">
-              
-                <span itemprop="name">可扩展、模块化CSS--状态样式规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-03T00:00:00+08:00"
-              content="2018-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-          </div>
-        
-        
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（6）之服务器配置部署/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/12/26/2017-12-26-Vue内容管理系统的搭建（6）之服务器配置部署/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/27/2017-12-27-javascript撸来撸去(1)-事件监听与对象属性/" itemprop="url">
-              
-                <span itemprop="name">javascript撸来撸去(1)-事件监听与对象属性</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-27T00:00:00+08:00"
-              content="2017-12-27" >
-          12-27
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（1）/" itemprop="url">
-              
-                <span itemprop="name">Vue内容管理系统的搭建(一)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-26T00:00:00+08:00"
-              content="2017-12-26" >
-          12-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（6）之服务器配置部署/" itemprop="url">
-              
-                <span itemprop="name">Vue 内容管理系统的搭建(六)之服务器配置部署</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-26T00:00:00+08:00"
-              content="2017-12-26" >
-          12-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <blockquote>
+<p>购买服务器部署个人项目是很多前端开发人员特别是刚开始进入行业的人士都很想去做但是又厌倦服务器繁琐配置的一件事(现在有些已经帮你搞好所有了)。本坑开始也是这样想的，既不太明白Linux 也不太清楚Ubuntu以及其他服务器知识内容。然而…….好了，又要提一下前端工作的历史变迁了。在以前万万千千的日子里，前端与页面设计傻傻分不清，紧接着前端要贯通js技术，js库，里面涉及到数据结构逻辑以及其他技术分支，后来有了前端mvc思维和其他新模式，再到前端工程化生产以及其他专业化形成的技术。种种这些，不管你如何回避，会发现你工作的时候，你需要知道如何使用shell脚本来操作文件，需要知道用指令来安装一些应用，需要知道使用什么不同的指令来为项目进行不同环境下的打包，也需要知道什么样的指令可以压缩，合并，模块化项目代码等等。既然回避不了，就得去学了。有句话说的真好：一个好的工程师，是自己主攻的东东很强很精通，同时对其他互联网热门技术、工具、技能等有一定掌握，并且有永不熄灭的求知欲、探索欲，对新事物有强烈好奇心。</p>
+</blockquote>
+<p>回到正题，本坑是按照实际的实践过程进行回忆性的记录，过程中大大小小有些坑，没办法一一列出。整个操作过程最直接的目的是能够在通过外网访问到本坑的前端项目，后台程序提供正常服务。服务器所有配置都是初学者水平都容易去做的。本坑使用的是服务器linux系统，选择的项目运行环境和数据库是Nginx+nodejs+MongoDB ，操作电脑是MAC，如果这不符合你的需求，接下来的内容可能并不是你需要的。少说废话，开始动手吧！</p>
+<p>#####服务器的选购</p>
+<blockquote>
+<p>选购前有几个名词需要稍微区别一下。虚拟主机，VPS，云主机。我们知道云主机也叫云服务器，既然是云那就是集群的概念，这意味着如果一台服务器发生故障不太会影响整体服务过程，这是单个服务器没有办法的。基于云的技术支持，云服务器有更加好的存储和服务能力。VPS的全名是Virtual Private Server，虚拟专用的服务器，之所以说是专用，是相对虚拟主机而言。VPS通过虚拟技术把单独的物理服务器分割成多个虚拟的服务器，彼此之间可以有各自IP,空间和系统，互不影响，达到专人专用。而虚拟主机是指存储空间和宽带共享，但是同样是通过虚拟技术把一台完整的服务器分成若干个主机。如果本坑解释的不太清楚，可以使用<a href="https://www.zhihu.com/question/19856629" target="_blank" rel="noopener">传送门</a>穿越查看更详细的解释。我们今天大多数个人消费者使用的就是这三者。</p>
+</blockquote>
+<p> 现在VPS、云服务器，云存储提供商真的是多的不能在多了。这里不举例了。知乎相关的一些<a href="https://www.zhihu.com/question/19918899" target="_blank" rel="noopener">讨论</a>值得用于实际的参考，如果你不太了解相关情况的话。国外也有很多。鉴于开发需要，不少技术人员就是用国外服务器搭梯子的。本坑是没钱的主，看到国内云服务器的费用还是有点小心疼的。本坑选择<a href="https://virmach.com/" target="_blank" rel="noopener">VirMach</a>的VPS，是国外的提供商。它的显著特点就是相对便宜，花个10刀，期限是一年。通过和该公司的技术人员(都是外国人)的问题反馈与交流，了解到他们的服务质量和态度还不错，服务器整体运行性能也能应付目前需求。不过传文件，速度并不理想，毕竟是国外服务器。关于这点其实本坑觉得并不是有很大的问题，因为我们的前后端项目基本上打包后项目并不是很大，传输上的速度并没有高要求，除非频繁更新，实在无法忍受。</p>
+<p>#####环境安装与配置</p>
+<p>######Nginx的安装</p>
+<blockquote>
+<p>本坑使用的VPS操作系统是centos6 ,centos可以用yum源来安装所需的web环境，有点像node的npm。不过很多centos系统yum 源的软件包都没有得到及时更新。需要更新下yum ，使用额外包获取较新版本软件。这点需要注意一下，如果不更新和添加额外包，很有可能安装目前版本的Nginx、node等等没有办法成功。</p>
+</blockquote>
+<figure class="highlight plain"><figcaption><span>update;yum clean up</span><a href="//更新yum```">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">```sudo yum install epel-release;yum clean up //安装额外包，获得较新版的应用</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>install nginx;yum clean up</span><a href="//安装nginx```">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Nginx安装过程有几次暂停输入，输入yes完成所有步骤。接下来是启动安装好的Nginx。</span><br><span class="line"></span><br><span class="line">```service nginx start //启动nginx</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>/etc/init.d/nginx start</span><a href="//也可以这样启动nginx```">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">浏览器访问 ip ，如果是nginx 的欢迎界面就意味着安装成功,如果出现以下错误提示，执行```sudo fuser -k 80/tcp```杀掉占用程序。</span><br><span class="line"></span><br><span class="line">```[Nginx [emerg]: bind() to 0.0.0.0:80 failed (98: Address already in use)</span><br></pre></td></tr></table></figure>
+<p>######nodejs 安装<br>按照以下指令一一执行就over了<br><figure class="highlight plain"><figcaption><span>--silent --location</span><a href="https://rpm.nodesource.com/setup_7.x" target="_blank" rel="noopener">| bash - // 获取Node v7 scripts,并不是最新,也不是太旧版本```</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">```yum -y install nodejs; yum clean all</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><figcaption><span>install gcc-c++ openssl-devel make; yum clean all ```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">```npm install -g express-generator  // 根据需要安装</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><figcaption><span>install -g webpack</span><a href="//">根据需要安装```</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">```npm install -g gulp // 根据需要安装</span><br></pre></td></tr></table></figure>
+<p>######MongoDB 安装<br>mongodb同样可以用yum安装，官网也有明确的方法，<a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/" target="_blank" rel="noopener">传送门在此</a>.<br>mongodb 启动服务后我们要在本地远程连接它。为此，我们要在MongoDB的配置文件里修改为允许远程连接，并且一般而言服务器是有自己的防火墙的，默认是不允许外界访问服务器端口，所以还需要防火墙对这个端口设置开放。<br>安装官网的安装方法，mongdb的配置文件路径<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h1 id="network-interfaces"><a href="#network-interfaces" class="headerlink" title="network interfaces"></a>network interfaces</h1><p> net:<br> port: 27017<br> bindIp: 0.0.0.0  # Listen to local interface only, comment to listen on all interfaces.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">找到防火墙配置文件路径```/etc/sysconfig/iptables``` 如果没有该文件，执行以下指令：</span><br><span class="line">```iptables -P OUTPUT ACCEPT</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><figcaption><span>iptables save</span><a href="//保存之```">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我们在iptables 文件内添加所示内容：</span><br></pre></td></tr></table></figure>
+<p>*filter<br>:INPUT ACCEPT [22:2682]<br>:FORWARD ACCEPT [0:0]<br>:OUTPUT ACCEPT [21:3307]<br>-A INPUT -p tcp -m state –state NEW -m tcp –dport 27017 -j ACCEPT #添加内容<br>COMMIT<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">```service iptables restart</span><br></pre></td></tr></table></figure></p>
+<p>通过<figure class="highlight plain"><figcaption><span>iptables status```可以看到端口开启关闭情况。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">这样远程连接over了。</span><br><span class="line">####项目部署</span><br><span class="line">&gt;到了这个阶段，走完最后一里路，就大告成功了。按照我们的思路，我们把打包好的前端资源与代码放到nginx，后台放到随意的能自己分辨的目录里，并且指令启动后台服务，就像在本地电脑做的一样。</span><br><span class="line"></span><br><span class="line">我们先处理后台，因为后台弄好后，你才能知道前端部署是否成功。我们要把后台代码放到服务器，本坑是放在```/apt```目录下，注意传输代码前要把代码的依赖包删除。安装```pm2```,它可以让我们的启动项目永久有效。</span><br><span class="line"></span><br><span class="line">```npm i pm2 -g</span><br></pre></td></tr></table></figure></p>
+<p>在后台项目根目录下启动项目：</p>
+<figure class="highlight plain"><figcaption><span>install</span><a href="//安装依赖```">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```pm2 start ./bin/www --watch// 启动项目并且监控项目代码变化，一旦有变化就重启项目</span><br></pre></td></tr></table></figure>
+<p>可以开放后台端口，在本地电脑用Postman请求测试工具来测试后台服务是否一切正常。</p>
+<p>接着，我们来处理前端部分。按照本坑的方式按照nginx ，nginx的配置文件放在<figure class="highlight plain"><figcaption><span>目录下。接下来要做的是要实现我们在浏览器输了服务器IP,导航到dist目录下的index.html，这样就打开了我们的管理系统。那么我们就要配置nginx.conf。本坑的nginx默认配置是在这里```/etc/nginx/conf.d/default.conf```,配置如下：</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">server &#123;</span><br><span class="line">    listen       80 default_server;</span><br><span class="line">    listen       [::]:80 default_server;</span><br><span class="line">    server_name  _;</span><br><span class="line">    #下面需要把根目录转到项目根目录下</span><br><span class="line">    root         /usr/share/nginx/html/dist;</span><br><span class="line"></span><br><span class="line">    # Load configuration files for the default server block.</span><br><span class="line">    include /etc/nginx/default.d/*.conf;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    #ajax请求要转发到后台服务</span><br><span class="line">    location ~ /api/ &#123;</span><br><span class="line">                proxy_pass http://127.0.0.1:3002;</span><br><span class="line">                proxy_read_timeout      7200;</span><br><span class="line">                proxy_connect_timeout   15;</span><br><span class="line">                proxy_set_header        Host zc.dev.your.111.com;</span><br><span class="line">                proxy_set_header        X-Forwarded-For     $proxy_add_x_forwarded_for;</span><br><span class="line">                client_max_body_size 2000m;</span><br><span class="line">                break;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></p>
+<p>好了，重启nginx。使用浏览器输入ip,本坑是<code>23.94.74.24</code>,注册账号，登录，成功！</p>
+<blockquote>
+<p>好了，整个部署就完成了，后面本坑将继续丰富前后端代码和UI,继续开发与记录。</p>
+</blockquote>
+<p>系列文章：<br><a href="https://www.jianshu.com/p/afbdd1afc732" target="_blank" rel="noopener">Vue 内容管理系统的搭建（一）</a><br><a href="https://www.jianshu.com/p/7b7d71680155" target="_blank" rel="noopener">Vue 内容管理系统的搭建（二）</a><br><a href="https://www.jianshu.com/p/9a29c2623eb8" target="_blank" rel="noopener">Vue内容管理系统的搭建（三）</a><br><a href="https://www.jianshu.com/p/98b2bbd81f68" target="_blank" rel="noopener">Vue内容管理系统的搭建(四)之第三方授权与验证</a><br><a href="http://www.jianshu.com/p/7df8a81c4a88" target="_blank" rel="noopener">Vue内容管理系统的搭建(五)之权限控制</a></p>
 
       
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/管理系统vue/" rel="tag"># 管理系统vue</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（2）/" rel="next" title="Vue内容管理系统的搭建(二)">
+                <i class="fa fa-chevron-left"></i> Vue内容管理系统的搭建(二)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/26/2017-12-26-Vue内容管理系统的搭建（1）/" rel="prev" title="Vue内容管理系统的搭建(一)">
+                Vue内容管理系统的搭建(一) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -730,6 +533,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -750,8 +564,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/WechatIMG13.jpeg"
@@ -866,6 +689,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#network-interfaces"><span class="nav-number">1.</span> <span class="nav-text">network interfaces</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -990,11 +829,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
 
 
   
@@ -1013,6 +850,18 @@
       <script id="dsq-count-scr" src="https://zivenday-me-1.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://zivenday.github.io/2017/12/26/2017-12-26-Vue内容管理系统的搭建（6）之服务器配置部署/';
+          this.page.identifier = '2017/12/26/2017-12-26-Vue内容管理系统的搭建（6）之服务器配置部署/';
+          this.page.title = 'Vue 内容管理系统的搭建(六)之服务器配置部署';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://zivenday-me-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   

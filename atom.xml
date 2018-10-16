@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ziven 在说话</title>
+  
+  <subtitle>愿阳光中是个孩子,风雨中是个大人.</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://zivenday.github.io/"/>
+  <updated>2018-10-11T09:26:48.000Z</updated>
+  <id>http://zivenday.github.io/</id>
+  
+  <author>
+    <name>Ziven 先生</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://zivenday.github.io/2018/10/08/hello-world/"/>
+    <id>http://zivenday.github.io/2018/10/08/hello-world/</id>
+    <published>2018-10-08T09:23:38.000Z</published>
+    <updated>2018-10-11T09:26:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+      <category term="其他" scheme="http://zivenday.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+      <category term="其他" scheme="http://zivenday.github.io/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>可扩展、模块化CSS--布局样式规则</title>
+    <link href="http://zivenday.github.io/2018/02/03/2018-02-03-%E5%8F%AF%E6%89%A9%E5%B1%95%E3%80%81%E6%A8%A1%E5%9D%97%E5%8C%96CSS--%E5%B8%83%E5%B1%80%E6%A0%B7%E5%BC%8F%E8%A7%84%E5%88%99/"/>
+    <id>http://zivenday.github.io/2018/02/03/2018-02-03-可扩展、模块化CSS--布局样式规则/</id>
+    <published>2018-02-02T16:00:00.000Z</published>
+    <updated>2018-10-11T09:54:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://upload-images.jianshu.io/upload_images/4455053-f90e39856d027ef0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="SMACSS is becoming one of the most useful contributions to front-end discussions in years"></p><blockquote><p>很自然的，CSS是用来解决元素在页面放置在哪里的问题。大体上来说，页面上大组件和相对较小组件的布局是有所区别的。小组件比方说是标注<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">#header, #article, #footer &#123;</span><br><span class="line">    width: 960px;</span><br><span class="line">    margin: auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#article &#123;</span><br><span class="line">    border: solid #CCC;</span><br><span class="line">    border-width: 1px 0 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></blockquote><p>布局样式同样也可以在是否复用的角度对其进行划分为主要和较小两个方面。主要的布局样式，如页眉和页脚，传统上是使用ID选择器的，但是要花时间考虑页面所有组件中常见的元素，并在适当的时候使用类选择器。<br>有些网站可能需要更加通用的布局框架，有些相对较小的布局样式使用类选择器替换ID选择器，这样可以在多个页面多次使用。<br>一般来说，布局样式拥有唯一ID或者类名。然而，因为不同因素，布局样式也要进行多变。比如说，同一布局样式可能在不同的用户体验上要做出有所不同，这个不同的表现也应该是布局样式的一部分。当然，同样这些不同的布局样式也是要被多次复用，并且也能够和其他的布局样式混合使用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">使用更高层次布局风格影响其他布局风格</span><br><span class="line">#article &#123;</span><br><span class="line">    float: left;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#sidebar &#123;</span><br><span class="line">    float: right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.l-flipped #article &#123;</span><br><span class="line">    float: right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.l-flipped #sidebar &#123;</span><br><span class="line">    float: left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>在上面的布局例子中，使<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">使用两种布局风格从流式布局转向固定布局</span><br><span class="line">#article &#123;</span><br><span class="line">    width: 80%;</span><br><span class="line">    float: left;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#sidebar &#123;</span><br><span class="line">    width: 20%;</span><br><span class="line">    float: right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.l-fixed #article &#123;</span><br><span class="line">    width: 600px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.l-fixed #sidebar &#123;</span><br><span class="line">    width: 200px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>而在这个例子中，<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">在布局的例子是另一个需要注意的我用的命名约定，声明使用```ID```选择器命名准确、没有特定的命名空间或者说是修饰，使用前缀的方式很显然让我们知道它是用来形容布局的。如果你要用布局样式，你就用```ID```选择器。如果你要在```ID```选择器上进行更多的修饰，是没有必要的。</span><br><span class="line">######使用```ID```选择器</span><br><span class="line">可以清晰的讲，使用```ID```选择器绝对是有好处的，在一些情况下。它可以作为```Javascript```的钩子。然而，在性能表现上使用```ID```和类选择器，两种并没有差异，反而因为特殊命名而增加复杂性。</span><br><span class="line">######布局范例</span><br><span class="line">理论是一回事，实际运用却是另外一回事。让我们看看现在的一些网站，了解到什么是布局样式，什么是模块样式。</span><br><span class="line">![CNN主页](http://upload-images.jianshu.io/upload_images/4455053-c6cbac9a7f0366a0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620)</span><br><span class="line">CNN的网站布局模式在其他网站中也有同样的运用。比如，它有页眉，导航栏，内容栏和页尾。</span><br><span class="line">![布局](http://upload-images.jianshu.io/upload_images/4455053-20f01e30e9deff1c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620)</span><br><span class="line">在撰写本文时,网站密切遵循这个分解并提供这些主要部分的ID属性。</span><br></pre></td></tr></table></figure></p><p>我们的css结构大致这样</p><p>#header { … }</p><p>#primarynav { … }</p><p>#maincontent { … }</p><div id="header"></div><br><div id="primarynav"></div><br><div id="maincontent"></div><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在这里，可能你还是有疑惑，这个布局太过简单，有没有更加详细的说明本章主题内容的例子呢？</span><br><span class="line">![CNN的featured部分](http://upload-images.jianshu.io/upload_images/4455053-72309dd43a7ea0f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620)</span><br><span class="line">在上面的截图里，是一个网格布局的例子，它标记了一系列的div和子div。我更愿意用list来替换它。</span><br></pre></td></tr></table></figure><br><br>featured的html代码<br><div><br><h2>Featured</h2><br><ul><br>    <li><a href="…">…</a></li><br>    <li><a href="…">…</a></li><br>    …<br></ul><br></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在没有使用```SMACSS```的概念的情况下，你可能会这样写它的样式，也就是说使用```ID```来加到div中，从而修饰内容。</span><br></pre></td></tr></table></figure><p>一种可能的css的写法<br>div#featured ul {<br>    margin: 0;<br>    padding: 0;<br>    list-style-type: none;<br>}</p><p>div#featured li {<br>    float: left;<br>    height: 100px;<br>    margin-left: 10px;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">在我们使用这种方法来写样式时，有一些情况条件：</span><br><span class="line">&gt;1.只有一个```featured```栏。</span><br><span class="line">2.```lists```浮动在左边。</span><br><span class="line">3.```lists```有```100pixs```高。</span><br><span class="line"></span><br><span class="line">这些情况条件都是很有可能的。在一些小网站里头都会有这样结构：网站在一段时间里不太会改变或者更加复杂。可能大型网站有更高的几率就重构样式。</span><br><span class="line">我们看到以上的样式代码例子，有很多地方可以做到优化。没必要使用```ID```选择器来限制标签选择器。既然list是子元素，那么可以使用```&gt;```符号。</span><br><span class="line">接下来，我们尝试重写这段代码，让它显得更加灵活。在布局这个角度，我们要知道它的成员之间的关系。我们没必要关心模块本身，也没必要关心这个布局的上下文是如何。</span><br></pre></td></tr></table></figure></p><p>OL 或 UL的样式<br>.l-grid {<br>    margin: 0;<br>    padding: 0;<br>    list-style-type: none;<br>}</p><p>.l-grid &gt; li {<br>    display: inline-block;<br>    margin: 0 0 10px 10px; </p><pre><code>/* IE7 hack to mimic inline-block on block elements */*display: inline;*zoom: 1;</code></pre><p>}</p><p><code>`</code><br>那么这样更改代码后，解决了什么问题呢？（当然不会是100%的解决）。</p><blockquote><p>1.这个栅格布局现在可以用到任何地方去创造一个浮动样式布局。<br>2.我们减少应用深度到1（可以查看应用深度这一章节，查看它的意思）。<br>3.我们减少使用特殊的选择器。<br>4.高度要求被删除，其中特殊高度的行可以增高到最大。</p></blockquote><p>相反的，这样做哪些方面是糟糕的呢？</p><blockquote><p>1.使用的孩子选择器，ie6可能没办法兼容。<br>2.css的变得复杂了，而且代码更多一些。</p></blockquote><p>在代码量上变得更多是很正常的。我们既然可以服用这个模块，同样也可以减少代码。<br>增加复杂性同样也是正常的，我们如果还在关注非常古老的浏览器，可能会遭到白眼。让选择器不那么复杂,也可以来扩展此布局,同时最小化特异性的影响。</p><p>原文地址：<a href="https://smacss.com/" target="_blank" rel="noopener">https://smacss.com/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/4455053-f90e39856d027ef0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; 
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="http://zivenday.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="css" scheme="http://zivenday.github.io/categories/%E5%89%8D%E7%AB%AF/css/"/>
+    
+    
+      <category term="css" scheme="http://zivenday.github.io/tags/css/"/>
+    
+      <category term="代码模块化" scheme="http://zivenday.github.io/tags/%E4%BB%A3%E7%A0%81%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>可扩展、模块化CSS--模块样式规则</title>
+    <link href="http://zivenday.github.io/2018/02/03/2018-02-03-%E5%8F%AF%E6%89%A9%E5%B1%95%E3%80%81%E6%A8%A1%E5%9D%97%E5%8C%96CSS--%E6%A8%A1%E5%9D%97%E6%A0%B7%E5%BC%8F%E8%A7%84%E5%88%99/"/>
+    <id>http://zivenday.github.io/2018/02/03/2018-02-03-可扩展、模块化CSS--模块样式规则/</id>
+    <published>2018-02-02T16:00:00.000Z</published>
+    <updated>2018-10-11T09:54:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://upload-images.jianshu.io/upload_images/4455053-f90e39856d027ef0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="SMACSS is becoming one of the most useful contributions to front-end discussions in years"></p><blockquote><p>就像前面一章提到的那样，模块在页面当中是一个独立的整体。像导航栏，弹出框，轮播等等。模块可以在布局当中，也可以在另一个模块之中，也可以自己独立的存在。所以模块必须做到尽可能的灵活，这样它才能在不破坏原有样式结构下，无差异地运用到页面的各个地方。</p></blockquote><p>我们去设置模块的时候，应该避免使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">模块的例子</span><br><span class="line">.module &gt; h2 &#123;</span><br><span class="line">    padding: 5px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.module span &#123;</span><br><span class="line">    padding: 5px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>######避免使用标签选择器<br>如果模块的子元素的样式是可预测的，统一的，那么使用后代和子选择器。<figure class="highlight plain"><figcaption><span>span```就是很好的用法，如果模块下的子元素在任何地方样式都一样的话。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">通用元素样式</span><br><span class="line">&lt;div class=&quot;fld&quot;&gt;</span><br><span class="line">    &lt;span&gt;Folder Name&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">/* The Folder Module */</span><br><span class="line">.fld &gt; span &#123;</span><br><span class="line">    padding-left: 20px;</span><br><span class="line">    background: url(icon.png);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>不过随着网站越来越复杂，问题也就来了。因为我们需要对模块进行扩展，所以用以上代码来修饰通用元素就会有诸多限制。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">通用元素样式</span><br><span class="line">&lt;div class=&quot;fld&quot;&gt;</span><br><span class="line">    &lt;span&gt;Folder Name&lt;/span&gt; </span><br><span class="line">    &lt;span&gt;(32 items)&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p><p>现在就有问题了。我们不想图标出现在两个模块子元素里。于是乎，我们又引发了另一个问题：<br>让一个选择器区别于其他的时候，它也就变得语义化。 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">&lt;div class=&quot;fld&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;fld-name&quot;&gt;Folder Name&lt;/span&gt; </span><br><span class="line">    &lt;span class=&quot;fld-items&quot;&gt;(32 items)&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p><p>通过添加类名，来增加语义化，无疑削弱了它的歧义。<br>如果你要使用元素选择器，那么久必须在类选择器之下使用，换句话说，你要使用子选址器。为此，你的确定元素与元素之间不会相互影响。普通元素语义化越多，那么产生冲突的可能就越大。只有像<code>`heading</code>语义化标签使用的越多，那么元素选择器就会使用的越成功。<br>原文地址：<a href="https://smacss.com/" target="_blank" rel="noopener">https://smacss.com/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/4455053-f90e39856d027ef0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; 
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="http://zivenday.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="css" scheme="http://zivenday.github.io/categories/%E5%89%8D%E7%AB%AF/css/"/>
+    
+    
+      <category term="css" scheme="http://zivenday.github.io/tags/css/"/>
+    
+      <category term="代码模块化" scheme="http://zivenday.github.io/tags/%E4%BB%A3%E7%A0%81%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>可扩展、模块化CSS--基础样式规则</title>
+    <link href="http://zivenday.github.io/2018/02/03/2018-02-03-%E5%8F%AF%E6%89%A9%E5%B1%95%E3%80%81%E6%A8%A1%E5%9D%97%E5%8C%96CSS--%E5%9F%BA%E7%A1%80%E6%A0%B7%E5%BC%8F%E8%A7%84%E5%88%99/"/>
+    <id>http://zivenday.github.io/2018/02/03/2018-02-03-可扩展、模块化CSS--基础样式规则/</id>
+    <published>2018-02-02T16:00:00.000Z</published>
+    <updated>2018-10-11T09:54:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://upload-images.jianshu.io/upload_images/4455053-f90e39856d027ef0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="SMACSS is becoming one of the most useful contributions to front-end discussions in years"></p><blockquote><p>基础样式规则是被应用到元素选择器、派生选择器、子选择器或者伪类，并不包括<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">基础样式</span><br><span class="line">body, form &#123;</span><br><span class="line">    margin: 0;</span><br><span class="line">    padding: 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a &#123;</span><br><span class="line">    color: #039;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a:hover &#123;</span><br><span class="line">    color: #03F;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></blockquote><p>所以,基础样式一般的内容就是默认定义链接的样式，项目的基础字体，<code>body</code>的背景颜色等等，基础样式不需要加上<code>!important</code><br>我在这里特别强调<code>body</code>的背景颜色，是因为很多开发者会把背景颜色设置成其他而不是白色，这样做的结果往往会导致整个设计看上去垮掉。可能字体的颜色也会变得不协调，让网站不是很好用。</p><p>######CSS 重置<br>css重置是为了剥离或者说是重置默认<code>margin</code>,<code>padding</code>,和其他属性。目的是让各个浏览器能够在样式上一致，以此在这个基础上再设计与开发。<br>很多重置框架太过激进，往往呢，引入它们之后，问题比应该要的效果更多。删除<code>margin</code>和<code>padding</code>将会导致重复再设置它们的工作。<br>当然有有好的重置工具，只要根据具体的需求和开发要求去选择就行。<br>总而言之，在开发前设置默认的重置样式是有利的。<br>原文地址：<a href="https://smacss.com/" target="_blank" rel="noopener">https://smacss.com/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/4455053-f90e39856d027ef0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; 
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="http://zivenday.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="css" scheme="http://zivenday.github.io/categories/%E5%89%8D%E7%AB%AF/css/"/>
+    
+    
+      <category term="css" scheme="http://zivenday.github.io/tags/css/"/>
+    
+      <category term="代码模块化" scheme="http://zivenday.github.io/tags/%E4%BB%A3%E7%A0%81%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>可扩展、模块化CSS--样式的分类和规则</title>
+    <link href="http://zivenday.github.io/2018/02/03/2018-02-03-%E5%8F%AF%E6%89%A9%E5%B1%95%E3%80%81%E6%A8%A1%E5%9D%97%E5%8C%96CSS--%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%88%86%E7%B1%BB%E5%92%8C%E8%A7%84%E5%88%99/"/>
+    <id>http://zivenday.github.io/2018/02/03/2018-02-03-可扩展、模块化CSS--样式的分类和规则/</id>
+    <published>2018-02-02T16:00:00.000Z</published>
+    <updated>2018-10-11T09:54:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://upload-images.jianshu.io/upload_images/4455053-f90e39856d027ef0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="SMACSS is becoming one of the most useful contributions to front-end discussions in years"></p><blockquote><p>每一个项目代码都需要一定的组织性。如果每次都在文件末尾直接添加一个新的css样式无疑会让检索样式变得困难，并且让其他开发人员对这些文件代码功能感到困惑。所以，我们都会尽可能地让我们写出来的代码能有组织性。我希望通过阅读接下来的文章，你会在已经正在进行的工作能力中特别的关注这个问题，如果幸运的话，也许能提高你的工作能力。</p></blockquote><p>你是如何进行选择使用ID选择器，class选择器，或者其他类型的选择器的？你是如何进行决定来让哪个element获得需要的样式的？又如何让你的样式代码或者说你的网站能够让人容易理解它是有组织性的？</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SMACSS的核心就是分类化。通过分类css规则，在此基础上进行更好的实践。有五种种类：</span><br><span class="line">1.基础</span><br><span class="line">2.布局</span><br><span class="line">3.模块</span><br><span class="line">4.状态</span><br><span class="line">5.主题</span><br></pre></td></tr></table></figure><p>我们发现我们经常把这五种种类的样式混合写在一起。如果你想要让自己写的样式能够更好理解，无疑在这五种种类的划分规则上写是个很好的选择。<br>每种种类都有指导规则并且能够运用上这种规则，那么我们该如何按照这种思想去敲代码呢？</p><blockquote><p>对样式进行分类，其中主要的目的是为了制造一种编程模式，这个模式能够在我们的设计中进行不断实践复制。用越少的代码进行复制，那么就越容易维护这些代码，也更一致性，当然模式必须是有利于这些实践的。</p></blockquote><p>1.基础样式：是默认的，他们几乎完全单一元素选择器,但可能包括属性选择器,伪类选择器、子选择器或兄弟姐妹选择器。很多开发人员都是会有一个base.css用来修正默认的不需要样式就是一个例子，这些样式它们看起来如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">html, body, form &#123; margin: 0; padding: 0; &#125;</span><br><span class="line">input[type=text] &#123; border: 1px solid #999; &#125;</span><br><span class="line">a &#123; color: #039; &#125;</span><br><span class="line">a:hover &#123; color: #03C; &#125;</span><br></pre></td></tr></table></figure></p><p>2.布局样式：把页面分成几块，布局样式一般由1个或者多个模块组成。<br>3.模块样式：是可复用的，就是我们设计中的一个模块的概念，可以是侧边栏，弹出框，列表栏等等<br>4.状态样式：是指模块和布局处在什么状态，比如侧边栏的黑色状态，按钮的被点击状态等等，状态规则要描述的是模块在不同状态下的样式是如何的。<br>5.主题样式：一般情况下网页都有一个主色调，就像一个会议由个主题，围绕这个主题来进行其他的讨论。（以前qq空间有更换主题的功能，就是这个概念）。</p><p>######命名规则<br>通过以上的分类呢，命名上的约定就会有利于我们快速的理解我们写的样式是属于哪个分类，并且能够理解它在整个页面的作用。在一个大型的项目中，很可能出现样式分别放在不同的文件里头，即使如此，我们依然能通过命名约定快速找到目标样式，知道样式属于哪个文件。<br>我很喜欢用前缀的方式去区分布局样式，状态样式和模块样式。比如说布局样式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">模块是在项目大量用到的，在模块前面加上前缀可能就会变得没必要的冗长。所以，模块样式我们直接用模块本身名字就行。比如以下代码显示：</span><br></pre></td></tr></table></figure></p><p>/<em> Example Module </em>/<br>.example { }</p><p>/<em> Callout Module </em>/<br>.callout { }</p><p>/<em> Callout Module with State </em>/<br>.callout.is-collapsed { }</p><p>/<em> Form field module </em>/<br>.field { }</p><p>/<em> Inline layout  </em>/<br>.l-inline { }<br><code>以模块为基础的元素往往会把基础的模块缩写作为前缀，比如代码例子</code>(example)<code>这个模块它的题注</code>(caption)<code>就用</code>(.exm-caption)<code>`</code>。我们一看到这个名词，就能知道这个题注是和例子这个模块有关的，也能很快找到这个元素的样式。<br>如果一个模块是另一个模块的变种，那么前者模块应该以后者模块作为前缀，关于子元素样式的内容将会在模块样式这章细说。<br>命名规则将会贯彻整篇文档内容，不要认为这些规则像教条一样必须严厉去执行，你只要像平时其他一样生活规律自然而然的去执行它。<br>原文地址：<a href="https://smacss.com/" target="_blank" rel="noopener">https://smacss.com/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/4455053-f90e39856d027ef0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; 
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="http://zivenday.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="css" scheme="http://zivenday.github.io/categories/%E5%89%8D%E7%AB%AF/css/"/>
+    
+    
+      <category term="css" scheme="http://zivenday.github.io/tags/css/"/>
+    
+      <category term="代码模块化" scheme="http://zivenday.github.io/tags/%E4%BB%A3%E7%A0%81%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>可扩展、模块化CSS--主题样式规则</title>
+    <link href="http://zivenday.github.io/2018/02/03/2018-02-03-%E5%8F%AF%E6%89%A9%E5%B1%95%E3%80%81%E6%A8%A1%E5%9D%97%E5%8C%96CSS--%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F%E8%A7%84%E5%88%99/"/>
+    <id>http://zivenday.github.io/2018/02/03/2018-02-03-可扩展、模块化CSS--主题样式规则/</id>
+    <published>2018-02-02T16:00:00.000Z</published>
+    <updated>2018-10-11T09:54:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://upload-images.jianshu.io/upload_images/4455053-f90e39856d027ef0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="SMACSS is becoming one of the most useful contributions to front-end discussions in years"></p><blockquote><p>很多项目可能并不需要主题这个样式，因为并不是样式的核心。然而一些网站是需要的，比如雅虎邮箱。</p></blockquote><p>######主题<br>把主题定义为网站或者APP需要看的颜色和图也许是很自然的。所以单独的把主题分开来进行选择和使用是很好的。<br>主题会影响原始布局，和默认样式一样的渲染页面，并且它覆盖基本颜色。改变基本颜色，改变整个感官。<br>现在假如说你有一个对话模块，它需要一个蓝色边框。模块本身初始会有一个边框样式，主题定义它的颜色。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.mod &#123;</span><br><span class="line">    border: 1px solid;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// in theme.css</span><br><span class="line">.mod &#123;</span><br><span class="line">    border-color: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>主题可以有类名，它清晰的指出，元素应该是怎么样的。只要我们把主题分离的够好就会更多样。像雅虎邮箱就有超过50种主题文件来综合各种想要的颜色和图片。</p><p>######排印<br>最后但不是最重要的，有一个字体样式，类似于主题。有些时候你需要大范围的重新定义正在使用的字体并且国际化等。中国和韩国等地区复杂的表意文字,是难以阅读小字体大小。因此,我们为每个地区创建单独的字体文件,重新定义这些组件的字体大小。字体规则通常会影响基础模块和风格。字体样式通常不会被指定在布局层次布局用于定位和布局,风格变化不像字体和颜色。像主题文件,可能没有实际需要定义字体类(如f-large)。你的网站应该只有3到6不同的字体。如果你有超过6字体大小宣布在您的项目中,您的用户可能不会注意到你的网站，也更难维护。</p><p>原文地址：<a href="https://smacss.com/" target="_blank" rel="noopener">https://smacss.com/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/4455053-f90e39856d027ef0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; 
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="http://zivenday.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="css" scheme="http://zivenday.github.io/categories/%E5%89%8D%E7%AB%AF/css/"/>
+    
+    
+      <category term="css" scheme="http://zivenday.github.io/tags/css/"/>
+    
+      <category term="代码模块化" scheme="http://zivenday.github.io/tags/%E4%BB%A3%E7%A0%81%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>可扩展、模块化CSS--状态样式规则</title>
+    <link href="http://zivenday.github.io/2018/02/03/2018-02-03-%E5%8F%AF%E6%89%A9%E5%B1%95%E3%80%81%E6%A8%A1%E5%9D%97%E5%8C%96CSS--%E7%8A%B6%E6%80%81%E6%A0%B7%E5%BC%8F%E8%A7%84%E5%88%99/"/>
+    <id>http://zivenday.github.io/2018/02/03/2018-02-03-可扩展、模块化CSS--状态样式规则/</id>
+    <published>2018-02-02T16:00:00.000Z</published>
+    <updated>2018-10-11T09:54:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://upload-images.jianshu.io/upload_images/4455053-f90e39856d027ef0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="SMACSS is becoming one of the most useful contributions to front-end discussions in years"></p><blockquote><p>状态样式将会增强或者覆盖其他样式。比如说折叠章节就有折叠和打开的状态。信息有成功和失败之分。状态一般应用到布局样式和基本模块之中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">状态的应用实例</span><br><span class="line">&lt;div id=&quot;header&quot; class=&quot;is-collapsed&quot;&gt;</span><br><span class="line">    &lt;form&gt;</span><br><span class="line">        &lt;div class=&quot;msg is-error&quot;&gt;</span><br><span class="line">            There is an error!</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;label for=&quot;searchbox&quot; class=&quot;is-hidden&quot;&gt;Search&lt;/label&gt;</span><br><span class="line">        &lt;input type=&quot;search&quot; id=&quot;searchbox&quot;&gt;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">我们发现子类名和状态的样式规则有一些相似之处。然而，状态样式规则有两个特点，状态样式规则作用到布局样式和模块样式，并且它依赖```Javascript```的调用。第二点的区别是最为关键的。子类样式完全在样式渲染时候就已经确定并且不会改变，相反的状态样式是随着用户机器```(client maching)```而变动。所以有```is-actived````或者```is-tab-actived```。</span><br><span class="line">既然状态样式要覆盖掉原来复杂的基本样式规则，那么久允许使用```!important```。当然是用它的情况尽可能的少为好，除非你真的需要用到。</span><br><span class="line">######状态样式规则和模块的混合</span><br><span class="line">状态样式往往不能通过继承来使用样式。状态的出现时为了让模块更加独特而设计。所以状态样式的命名最好加上模块名，这样就会很显而易见。状态是为模块而来的，而不是全局独立二来的。</span><br></pre></td></tr></table></figure><p>模块的状态样式<br>.tab {<br>    background-color: purple;<br>    color: white;<br>}</p><p>.is-tab-active {<br>    background-color: white;<br>    color: black;<br>}<br><code>`</code><br>在加载的样式的时序上，应该先加载全局样式，然后再加载状态样式。</p><p>原文地址：<a href="https://smacss.com/" target="_blank" rel="noopener">https://smacss.com/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/4455053-f90e39856d027ef0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; 
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="http://zivenday.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="css" scheme="http://zivenday.github.io/categories/%E5%89%8D%E7%AB%AF/css/"/>
+    
+    
+      <category term="css" scheme="http://zivenday.github.io/tags/css/"/>
+    
+      <category term="代码模块化" scheme="http://zivenday.github.io/tags/%E4%BB%A3%E7%A0%81%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javascript撸来撸去(1)-事件监听与对象属性</title>
+    <link href="http://zivenday.github.io/2017/12/27/2017-12-27-javascript%E6%92%B8%E6%9D%A5%E6%92%B8%E5%8E%BB(1)-%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC%E4%B8%8E%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7/"/>
+    <id>http://zivenday.github.io/2017/12/27/2017-12-27-javascript撸来撸去(1)-事件监听与对象属性/</id>
+    <published>2017-12-26T16:00:00.000Z</published>
+    <updated>2018-10-11T09:55:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>本坑开始新的系列记录，该记录是回顾这么多年以来学习到javescript知识以及通过这种让自己更加独立的审视相关基础能力和方式方法，系列文章记录的内容都会有以下特点：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 非常之基础</span><br><span class="line">&gt; 非常之实用</span><br><span class="line">&gt; 稍微带点趣味</span><br></pre></td></tr></table></figure></p><p>这篇文章围绕事件监听与对象属性来记录，你将了解到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1.`addEvenListener `第三个参数`passvie`是用来干嘛的.</span><br><span class="line">2.es2015中对象属性中一帮隐藏的`getter`和`setter`方法。</span><br></pre></td></tr></table></figure></p><p>从以下这段代码开始,一步步来解释说明：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var passiveSupported = false;</span><br><span class="line"></span><br><span class="line">try &#123;</span><br><span class="line">  var options = Object.defineProperty(&#123;&#125;, &quot;passive&quot;, &#123;</span><br><span class="line">    get: function() &#123;</span><br><span class="line">      passiveSupported = true;</span><br><span class="line">      console.log(&quot;11111&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  window.addEventListener(&quot;test&quot;, null, options);</span><br><span class="line">&#125; catch(err) &#123;&#125;</span><br></pre></td></tr></table></figure></p><p>如果javascript学的很随便的同学，可能对这段代码的功能很疑惑。因为像<code>Object.defineProperty</code>比较少用到。我们从这个方法开始解释说明，最终获知这段代码是有什么功能作用。</p><h4 id="Object-defineProperty"><a href="#Object-defineProperty" class="headerlink" title="Object.defineProperty"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank" rel="noopener">Object.defineProperty</a></h4><p>在MDN里我们知道它有三个参数对象：<code>obj</code>, <code>prop</code>, <code>descriptor</code>。显然obj 就是要改变的那个对象，而<code>prop</code>是需要改变或者添加的属性，<code>descriptor</code>是js已经规定好的属性的属性，其中<code>enumerable</code>就是其中之一。在es2016的版本中，这个属性得到比较上一个版本更多使用。有了这个属性我们可以用map，keys等等遍历函数对有着该属性的数据集合进行处理，可以解放不小的生产力。<br>回到代码中来,<code>Object</code>定义了一个<code>{}</code>设置了一个<code>passive</code>，并且提供了一个<code>getter</code> 方法。我们不妨在addEvenListener前把options打印出来，如下图：<br><img src="http://upload-images.jianshu.io/upload_images/4455053-86baf6f7bbe160ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/340" alt="点击红色方框，getter将执行"></p><p>什么时候回<code>getter</code>被调用了，执行完<code>window.addEventListener(&quot;test&quot;, null, options);</code>这时程序就会查询passvie的属性值，虽然这是一个没有效果的监听<code>test</code>,永远不会触发该事件。最终的效果就是 <code>passiveSupported = true</code>。那么这有什么意义呢？</p><blockquote><p>我们先回顾下对象<code>getter</code>方法是什么。<br>JavaScript对象的属性是由名字、值和一组特性（可写、可枚举、可配置等）构成的。在ECMAScript 5中，属性值可以用一个或两个方法代替，这两个方法就是<code>getter</code>和<code>setter</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var options = &#123;</span><br><span class="line">    a: 2,</span><br><span class="line">    get b()&#123;</span><br><span class="line">        return 3;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">console.log(options.a);//2</span><br><span class="line">console.log(options.b);//3</span><br></pre></td></tr></table></figure></p></blockquote><blockquote><p>上面的代码中，属性<code>a</code>称为“数据属性”，它只有一个简单的值；像属性<code>b</code>这种用<code>getter</code>和<code>setter</code>方法定义的属性称为“存取器属性”。如果属性同时具有<code>getter</code>和<code>setter</code>，那么它是一个读/写属性。如果它只有<code>getter</code>方法，那么它是一个只读属性。如果它只有<code>setter</code>方法，那么它是一个只写属性（数据属性中有一些例外），读取只写属性总是返回<code>undefined</code>.存取器属性定义为一个或两个与属性同名的函数，这个函数定义没有使用<code>function</code>关键字，而是使用<code>get</code>或set，也没有使用冒号将属性名和函数体分开，但函数体的结束和下一个方法之间有逗号隔开。当程序查询存取器的属性值时，JavaScript代用<code>getter</code>方法（无参数），这个方法的返回值就是该属性存取表达式的值。当程序设置一个存取器属性值时，JavaScript调用<code>setter</code>方法，将赋值表达式右侧的值当作参数传入<code>setter</code>。从某种意义上来说，这个方法负责设置属性值，可以忽略该方法的返回值。<br>开头的代码段里的getter方法是一个匿名函数，而这个例子中不是，但是本质是一样的。</p></blockquote><p>####<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener" target="_blank" rel="noopener">addEvenListener</a><br>在过去经验中，我们往往在使用<code>addEvenListener</code>的第三个参数时，是使用布尔值获取直接不行，在MDN里，它是一个<code>options</code>对象。我们一般会用到的是这几个属性：<code>capture,once,passive</code>。<code>capture</code>就是我们经常实际使用的布尔值设置<code>useCapture</code>，如果是<code>true</code>捕获阶段触发事件，相反则冒泡阶段触发。默认情况，事件是在绑定元素冒泡阶段触发。MDN对passive这个属性的解释是：当为<code>true</code>时，表示 <code>listener</code> 永远不会调用 <code>preventDefault()</code>，如果 <code>listener</code>仍然调用了这个函数，客户端将会忽略它并抛出一个控制台警告。<br>preventDefault() 是指阻止事件行为，比如 a标签的链接，点击会跳转；还有触发<code>touchstart</code>事件，手机端滚屏幕效果也是一种默认行为。如果在这些事件处理函数出现<code>preventDefault</code>，比如滚屏效果就不会滚动，显然不是我们要的。所以就需要一个参数来告诉浏览器，这个函数里没有preventDefault方法。这个属性最初在谷歌浏览器里使用，它的目的是为解决滚动和触摸事件的卡顿。目前火狐也支持，其他浏览器相对旧版连<code>option</code>对象都不支持。兼于这个问题就有了开始的那段代码用于兼容性问题解决。<br>如果兼容性不支持<code>option</code> ，执行<code>window.addEventListener(&#39;test&#39;, null, options)</code>中<code>options</code>会自动被浏览器转为<code>true</code>,<code>getter</code>方法也不会执行。</p><blockquote><p>捕获阶段：首先<code>window</code>会获捕获到事件，之后<code>document</code>、<code>documentElement</code>、<code>body</code>会捕获到，再之后就是在<code>body</code>中<code>DOM</code>元素一层一层的捕获到事件。<br>目标阶段：对目标元素在捕获和冒泡都绑定触发事件，则捕获触发事件一次，冒泡触发事件一次，两者之间可视为目标阶段。<br>冒泡阶段：会和捕获阶段相反的步骤将事件一步一步的冒泡到window。</p></blockquote><p>参考文档：<br><a href="https://segmentfault.com/a/1190000003482372" target="_blank" rel="noopener">1.监听三个阶段</a><br><a href="https://zhuanlan.zhihu.com/p/24555031" target="_blank" rel="noopener">2.移动Web滚动性能优化: Passive event listeners</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;本坑开始新的系列记录，该记录是回顾这么多年以来学习到javescript知识以及通过这种让自己更加独立的审视相关基础能力和方式方法，系列文章记录的内容都会有以下特点：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cla
+      
+    
+    </summary>
+    
+      <category term="javascript撸来撸去" scheme="http://zivenday.github.io/categories/javascript%E6%92%B8%E6%9D%A5%E6%92%B8%E5%8E%BB/"/>
+    
+    
+      <category term="js基础" scheme="http://zivenday.github.io/tags/js%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue内容管理系统的搭建(一)</title>
+    <link href="http://zivenday.github.io/2017/12/26/2017-12-26-Vue%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%90%AD%E5%BB%BA%EF%BC%881%EF%BC%89/"/>
+    <id>http://zivenday.github.io/2017/12/26/2017-12-26-Vue内容管理系统的搭建（1）/</id>
+    <published>2017-12-25T16:00:00.000Z</published>
+    <updated>2017-12-27T03:58:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>vue在最近一段时间火热起来，相比较于ng特别是ng1和rectjs， vue显得更加轻，它也迎合了前端模块化，组件化的发展趋势。当然每个人对vue的看法和观点是不经相同的。本坑由于公司项目接触学习了vuejs，用于网站前端的搭建。但是本坑总觉得没有深入学习vue，再加上本坑也想学学nodejs。所有有了想开发与网站相匹配的后台内容管理系统。这样就有机会能更加深入的学习js大法了。当然啦，只是先实现非常简单的一些功能，比如登入退出，上传更新，列表显示等。本坑以此留下学习的轨迹，方便以后再次查看，也想分享学习过程。文章有什么不足之处，欢迎留言赐教。分前端与后端，先从前端开始吧。<br>搭建前端环境<br>在搭建前端项目之前，当然必须把应该要的环境给安装好，比如nodejs。安装nodejs时npm也附带安装完成。<br>前端代码托管处：</p><p><pre><br><a href="https://github.com/githubziven/font" target="_blank" rel="noopener">https://github.com/githubziven/font</a><br></pre><br>本坑是按照官方文档出发，通过命令行完成搭建。<br>传送门：</p><p><pre><br><a href="https://cn.vuejs.org/v2/guide/installation.html#命令行工具" target="_blank" rel="noopener">https://cn.vuejs.org/v2/guide/installation.html#命令行工具</a><br></pre></p><p><pre></pre></p><h1 id="全局安装-vue-cli"><a href="#全局安装-vue-cli" class="headerlink" title="全局安装 vue-cli"></a>全局安装 vue-cli</h1><p>$ npm install –global vue-cli</p><h1 id="创建一个基于-webpack-模板的新项目"><a href="#创建一个基于-webpack-模板的新项目" class="headerlink" title="创建一个基于 webpack 模板的新项目"></a>创建一个基于 webpack 模板的新项目</h1><p>$ vue init webpack font</p><h1 id="安装依赖，走你"><a href="#安装依赖，走你" class="headerlink" title="安装依赖，走你"></a>安装依赖，走你</h1><p>$cd font<br>$ npm install</p><p>#启动项目<br>$ npm run dev<br><br>在指令 npm  install 如果报这样的错：npm ERR! registry error parsing json。这很有可能并不是你的错。这是由于连网时出现了问题，必须换个淘宝镜像才行。网上提供下面三种方式可以解决该问题，我按第二种方式，成功：<br>（1）通过config命令<br>打开命令行，输入</p><p><pre><br>npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br></pre><br>然后通过npm info underscore 来检查是否配置成功（如果上面配置正确这个命令会有字符串response）<br>（2）命令行指定</p><p><pre><br>npm –registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a> info underscore<br></pre><br>（3）编辑 ~/.npmrc 加入下面内容</p><p><pre><br>registry = <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br></pre><br>启动项目后，就能看到如下界面。</p><p><img src="http://upload-images.jianshu.io/upload_images/4455053-cb6d12c414b1c0fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>编辑前端登入界面</p><p>element ui是饿了么技术团队开发的，当然它也是近期开发出来特别针对vue2的适合pc端的ui。本坑之所以用它，除了特别针对vue2，它看上去也不错，里面提供的组件也非常适合管理系统使用。element ui官网传送门：</p><p><pre><br><a href="http://element.eleme.io/#/zh-CN/component/installation" target="_blank" rel="noopener">http://element.eleme.io/#/zh-CN/component/installation</a><br></pre><br>npm安装 </p><p><pre><br>npm i element-ui -S<br></pre><br>引入 Element<br>你可以引入整个 Element，或是根据需要仅引入需要的部分组件。安装官方文档就行了。<br>页面代码 如下所示：</p><p><pre></pre></p><p><template><br>    <div class="html__login"><br>        <div class="form__login--center"><br>            <div class="form__title--center"><br>                ADMIN<br>            </div><br>            <div class="form__content"><br>                <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="ruleForm"><br>                    <el-form-item label="登录名" prop="name"><br>                        <el-input v-model="ruleForm.name"></el-input><br>                    </el-form-item><br>                    <el-form-item label="密码" prop="password"><br>                        <el-input type="password" v-model="ruleForm.password" auto-complete="off"></el-input><br>                    </el-form-item><br>                    <el-form-item><br>                        <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button><br>                        <el-button @click="resetForm('ruleForm')">重置</el-button><br>                    </el-form-item><br>                </el-form><br>            </div><br>        </div><br>    </div><br></template><br><br>引入vue-resoures<br>它用于发送ajax请求，resource服务是个非常便捷的工具，它对请求进行了少许的封装。<br>同样必须要安装，再引入到main.js中<br>指令</p><p><pre><br>npm install vue-resource<br></pre><br>main.js 代码如下：</p><p><pre><br>// The Vue build version to load with the <code>import</code> command// (runtime-only or standalone) has been set in webpack.base.conf with an alias.<br>import Vue from ‘vue’<br>import VueResource from “vue-resource”<br>import ElementUI from ‘element-ui’<br>import ‘element-ui/lib/theme-default/index.css’<br>import App from ‘./App’<br>import router from ‘./router’<br>Vue.use(VueResource)<br>Vue.use(ElementUI)/<em> eslint-disable no-new </em>/<br>new Vue({<br>el: ‘#app’,<br>router,  template: ‘’,<br> components: { App }<br>})<br></pre><br>最后构建的登录界面<br><img src="http://upload-images.jianshu.io/upload_images/4455053-8378454e0a6a6389.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>前端发送请求：</p><p><pre><br>submitForm(formName) {<br>this.$refs[formName].validate((valid) =&gt; {<br>if (valid) {<br>this.createUser(formName);<br>} else {<br>console.log(‘error submit!!’);<br>return false;<br>}<br>});<br>},<br>resetForm(formName) {<br>this.$refs[formName].resetFields();<br>},<br>createUser(formName) {<br>var jsonData = {};<br>var formObj = this.$refs[formName].$children;<br>for (var i = formObj.length - 2; i &gt;= 0; i–) {<br>jsonData[formObj[i].prop] = formObj[i].fieldValue;<br>}<br>this.checkUser(jsonData);<br>},<br>checkUser(jsonData) {<br>var res=’’;<br>this.$http.post(this.apiUrl, jsonData)<br>.then((response) =&gt; {<br>res=response.body;<br>console.log(response);<br>if (res.code == 1) {<br>this.$message({<br>message: res.message,<br>type: ‘success’<br>});<br>} else {<br>this.$message.error(res.message);<br>}<br>}).catch((response) =&gt; {<br>// response.json()<br>alert(‘登录失败！’)<br>})<br>}<br>}<br></pre><br>整个登录界面模块login.vue</p><p><pre></pre></p><p><template><br>    <div class="html__login"><br>        <div class="form__login--center"><br>            <div class="form__title--center"><br>                ADMIN<br>            </div><br>            <div class="form__content"><br>                <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="ruleForm"><br>                    <el-form-item label="登录名" prop="name"><br>                        <el-input v-model="ruleForm.name"></el-input><br>                    </el-form-item><br>                    <el-form-item label="密码" prop="password"><br>                        <el-input type="password" v-model="ruleForm.password" auto-complete="off"></el-input><br>                    </el-form-item><br>                    <el-form-item><br>                        <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button><br>                        <el-button @click="resetForm('ruleForm')">重置</el-button><br>                    </el-form-item><br>                </el-form><br>            </div><br>        </div><br>    </div><br></template></p><p><script><br>export default {<br>    name: ‘html__login’,<br>    data() {<br>        var checkName = (rule, value, callback) =&gt; {<br>            if (!value) {<br>                return callback(new Error(‘登录名不能为空！’))<br>            } else {<br>                callback();<br>            }<br>        };<br>        var checkPass = (rule, value, callback) =&gt; {<br>            if (value === ‘’) {<br>                callback(new Error(‘密码不能为空’));<br>            } else {<br>                callback();<br>            }<br>        };<br>        return {<br>            ruleForm: {<br>                name: ‘’,<br>                password: ‘’,<br>                age: ‘’<br>            },<br>            apiUrl: ‘<a href="http://localhost:3000/login&#39;">http://localhost:3000/login&#39;</a>,<br>            rules: {<br>                name: [{<br>                    validator: checkName,<br>                    trigger: ‘blur’<br>                }],<br>                password: [{<br>                    validator: checkPass,<br>                    trigger: ‘blur’<br>                }]<br>            }<br>        }<br>    },<br>    methods: {<br>        submitForm(formName) {<br>            this.$refs[formName].validate((valid) =&gt; {<br>                if (valid) {<br>                    this.createUser(formName);<br>                } else {<br>                    console.log(‘error submit!!’);<br>                    return false;<br>                }<br>            });<br>        },<br>        resetForm(formName) {<br>            this.$refs[formName].resetFields();<br>        },<br>        createUser(formName) {<br>            var jsonData = {};<br>            var formObj = this.$refs[formName].$children;<br>            for (var i = formObj.length - 2; i &gt;= 0; i–) {<br>                jsonData[formObj[i].prop] = formObj[i].fieldValue;<br>            }<br>            this.checkUser(jsonData);<br>        },<br>        checkUser(jsonData) {<br>            var res=’’;<br>            this.$http.post(this.apiUrl, jsonData)<br>                .then((response) =&gt; {<br>                    res=response.body;<br>                    console.log(response);<br>                    if (res.code == 1) {<br>                        this.$message({<br>                            message: res.message,<br>                            type: ‘success’<br>                        });<br>                    } else {<br>                        this.$message.error(res.message);<br>                    }<br>                }).catch((response) =&gt; {<br>                    // response.json()<br>                    alert(‘登录失败！’)<br>                })<br>        }</p><pre><code>}</code></pre><p>}<br></script><br><!-- Add "scoped" attribute to limit CSS to this component only --></p><p><style lang="scss" scoped><br>$backgroundColor:#C0C0C0;<br>.html__login {<br>    position: absolute;<br>    width: 100%;<br>    height: 100%;<br>    background-color: $backgroundColor;<br>    display: flex;<br>    justify-content: center;<br>    align-items: center;<br>    .form__login–center {<br>        position: relative;<br>        width: 500px;<br>        height: 250px;<br>        background-color: rgba(255, 255, 255, 0.5);<br>        border-radius: 10px;<br>        padding-top: 20px;<br>        text-align: center;<br>        margin: 0 auto;<br>    }<br>    .form__title–center {<br>        padding-bottom: 20px<br>    }<br>    .form__content {<br>        width: 85%<br>    }<br>}</p><p>/<em> Form-mixin </em>/<br></style><br><br>好了，前端部分就是这样，发送的请求就给后台了。下篇我们就用express来响应这个登录请求</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;vue在最近一段时间火热起来，相比较于ng特别是ng1和rectjs， vue显得更加轻，它也迎合了前端模块化，组件化的发展趋势。当然每个人对vue的看法和观点是不经相同的。本坑由于公司项目接触学习了vuejs，用于网站前端的搭建。但是本坑总觉得没有深入学习vue，再加上本
+      
+    
+    </summary>
+    
+      <category term="前端项目记录" scheme="http://zivenday.github.io/categories/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/"/>
+    
+    
+      <category term="管理系统vue" scheme="http://zivenday.github.io/tags/%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9Fvue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue 内容管理系统的搭建(六)之服务器配置部署</title>
+    <link href="http://zivenday.github.io/2017/12/26/2017-12-26-Vue%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%90%AD%E5%BB%BA%EF%BC%886%EF%BC%89%E4%B9%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E9%83%A8%E7%BD%B2/"/>
+    <id>http://zivenday.github.io/2017/12/26/2017-12-26-Vue内容管理系统的搭建（6）之服务器配置部署/</id>
+    <published>2017-12-25T16:00:00.000Z</published>
+    <updated>2017-12-27T03:57:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>购买服务器部署个人项目是很多前端开发人员特别是刚开始进入行业的人士都很想去做但是又厌倦服务器繁琐配置的一件事(现在有些已经帮你搞好所有了)。本坑开始也是这样想的，既不太明白Linux 也不太清楚Ubuntu以及其他服务器知识内容。然而…….好了，又要提一下前端工作的历史变迁了。在以前万万千千的日子里，前端与页面设计傻傻分不清，紧接着前端要贯通js技术，js库，里面涉及到数据结构逻辑以及其他技术分支，后来有了前端mvc思维和其他新模式，再到前端工程化生产以及其他专业化形成的技术。种种这些，不管你如何回避，会发现你工作的时候，你需要知道如何使用shell脚本来操作文件，需要知道用指令来安装一些应用，需要知道使用什么不同的指令来为项目进行不同环境下的打包，也需要知道什么样的指令可以压缩，合并，模块化项目代码等等。既然回避不了，就得去学了。有句话说的真好：一个好的工程师，是自己主攻的东东很强很精通，同时对其他互联网热门技术、工具、技能等有一定掌握，并且有永不熄灭的求知欲、探索欲，对新事物有强烈好奇心。</p></blockquote><p>回到正题，本坑是按照实际的实践过程进行回忆性的记录，过程中大大小小有些坑，没办法一一列出。整个操作过程最直接的目的是能够在通过外网访问到本坑的前端项目，后台程序提供正常服务。服务器所有配置都是初学者水平都容易去做的。本坑使用的是服务器linux系统，选择的项目运行环境和数据库是Nginx+nodejs+MongoDB ，操作电脑是MAC，如果这不符合你的需求，接下来的内容可能并不是你需要的。少说废话，开始动手吧！</p><p>#####服务器的选购</p><blockquote><p>选购前有几个名词需要稍微区别一下。虚拟主机，VPS，云主机。我们知道云主机也叫云服务器，既然是云那就是集群的概念，这意味着如果一台服务器发生故障不太会影响整体服务过程，这是单个服务器没有办法的。基于云的技术支持，云服务器有更加好的存储和服务能力。VPS的全名是Virtual Private Server，虚拟专用的服务器，之所以说是专用，是相对虚拟主机而言。VPS通过虚拟技术把单独的物理服务器分割成多个虚拟的服务器，彼此之间可以有各自IP,空间和系统，互不影响，达到专人专用。而虚拟主机是指存储空间和宽带共享，但是同样是通过虚拟技术把一台完整的服务器分成若干个主机。如果本坑解释的不太清楚，可以使用<a href="https://www.zhihu.com/question/19856629" target="_blank" rel="noopener">传送门</a>穿越查看更详细的解释。我们今天大多数个人消费者使用的就是这三者。</p></blockquote><p> 现在VPS、云服务器，云存储提供商真的是多的不能在多了。这里不举例了。知乎相关的一些<a href="https://www.zhihu.com/question/19918899" target="_blank" rel="noopener">讨论</a>值得用于实际的参考，如果你不太了解相关情况的话。国外也有很多。鉴于开发需要，不少技术人员就是用国外服务器搭梯子的。本坑是没钱的主，看到国内云服务器的费用还是有点小心疼的。本坑选择<a href="https://virmach.com/" target="_blank" rel="noopener">VirMach</a>的VPS，是国外的提供商。它的显著特点就是相对便宜，花个10刀，期限是一年。通过和该公司的技术人员(都是外国人)的问题反馈与交流，了解到他们的服务质量和态度还不错，服务器整体运行性能也能应付目前需求。不过传文件，速度并不理想，毕竟是国外服务器。关于这点其实本坑觉得并不是有很大的问题，因为我们的前后端项目基本上打包后项目并不是很大，传输上的速度并没有高要求，除非频繁更新，实在无法忍受。</p><p>#####环境安装与配置</p><p>######Nginx的安装</p><blockquote><p>本坑使用的VPS操作系统是centos6 ,centos可以用yum源来安装所需的web环境，有点像node的npm。不过很多centos系统yum 源的软件包都没有得到及时更新。需要更新下yum ，使用额外包获取较新版本软件。这点需要注意一下，如果不更新和添加额外包，很有可能安装目前版本的Nginx、node等等没有办法成功。</p></blockquote><figure class="highlight plain"><figcaption><span>update;yum clean up</span><a href="//更新yum```">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">```sudo yum install epel-release;yum clean up //安装额外包，获得较新版的应用</span><br></pre></td></tr></table></figure><figure class="highlight plain"><figcaption><span>install nginx;yum clean up</span><a href="//安装nginx```">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Nginx安装过程有几次暂停输入，输入yes完成所有步骤。接下来是启动安装好的Nginx。</span><br><span class="line"></span><br><span class="line">```service nginx start //启动nginx</span><br></pre></td></tr></table></figure><figure class="highlight plain"><figcaption><span>/etc/init.d/nginx start</span><a href="//也可以这样启动nginx```">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">浏览器访问 ip ，如果是nginx 的欢迎界面就意味着安装成功,如果出现以下错误提示，执行```sudo fuser -k 80/tcp```杀掉占用程序。</span><br><span class="line"></span><br><span class="line">```[Nginx [emerg]: bind() to 0.0.0.0:80 failed (98: Address already in use)</span><br></pre></td></tr></table></figure><p>######nodejs 安装<br>按照以下指令一一执行就over了<br><figure class="highlight plain"><figcaption><span>--silent --location</span><a href="https://rpm.nodesource.com/setup_7.x" target="_blank" rel="noopener">| bash - // 获取Node v7 scripts,并不是最新,也不是太旧版本```</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">```yum -y install nodejs; yum clean all</span><br></pre></td></tr></table></figure></p><figure class="highlight plain"><figcaption><span>install gcc-c++ openssl-devel make; yum clean all ```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">```npm install -g express-generator  // 根据需要安装</span><br></pre></td></tr></table></figure> <figure class="highlight plain"><figcaption><span>install -g webpack</span><a href="//">根据需要安装```</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">```npm install -g gulp // 根据需要安装</span><br></pre></td></tr></table></figure><p>######MongoDB 安装<br>mongodb同样可以用yum安装，官网也有明确的方法，<a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/" target="_blank" rel="noopener">传送门在此</a>.<br>mongodb 启动服务后我们要在本地远程连接它。为此，我们要在MongoDB的配置文件里修改为允许远程连接，并且一般而言服务器是有自己的防火墙的，默认是不允许外界访问服务器端口，所以还需要防火墙对这个端口设置开放。<br>安装官网的安装方法，mongdb的配置文件路径<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p><h1 id="network-interfaces"><a href="#network-interfaces" class="headerlink" title="network interfaces"></a>network interfaces</h1><p> net:<br> port: 27017<br> bindIp: 0.0.0.0  # Listen to local interface only, comment to listen on all interfaces.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">找到防火墙配置文件路径```/etc/sysconfig/iptables``` 如果没有该文件，执行以下指令：</span><br><span class="line">```iptables -P OUTPUT ACCEPT</span><br></pre></td></tr></table></figure></p><figure class="highlight plain"><figcaption><span>iptables save</span><a href="//保存之```">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我们在iptables 文件内添加所示内容：</span><br></pre></td></tr></table></figure><p>*filter<br>:INPUT ACCEPT [22:2682]<br>:FORWARD ACCEPT [0:0]<br>:OUTPUT ACCEPT [21:3307]<br>-A INPUT -p tcp -m state –state NEW -m tcp –dport 27017 -j ACCEPT #添加内容<br>COMMIT<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">```service iptables restart</span><br></pre></td></tr></table></figure></p><p>通过<figure class="highlight plain"><figcaption><span>iptables status```可以看到端口开启关闭情况。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">这样远程连接over了。</span><br><span class="line">####项目部署</span><br><span class="line">&gt;到了这个阶段，走完最后一里路，就大告成功了。按照我们的思路，我们把打包好的前端资源与代码放到nginx，后台放到随意的能自己分辨的目录里，并且指令启动后台服务，就像在本地电脑做的一样。</span><br><span class="line"></span><br><span class="line">我们先处理后台，因为后台弄好后，你才能知道前端部署是否成功。我们要把后台代码放到服务器，本坑是放在```/apt```目录下，注意传输代码前要把代码的依赖包删除。安装```pm2```,它可以让我们的启动项目永久有效。</span><br><span class="line"></span><br><span class="line">```npm i pm2 -g</span><br></pre></td></tr></table></figure></p><p>在后台项目根目录下启动项目：</p><figure class="highlight plain"><figcaption><span>install</span><a href="//安装依赖```">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```pm2 start ./bin/www --watch// 启动项目并且监控项目代码变化，一旦有变化就重启项目</span><br></pre></td></tr></table></figure><p>可以开放后台端口，在本地电脑用Postman请求测试工具来测试后台服务是否一切正常。</p><p>接着，我们来处理前端部分。按照本坑的方式按照nginx ，nginx的配置文件放在<figure class="highlight plain"><figcaption><span>目录下。接下来要做的是要实现我们在浏览器输了服务器IP,导航到dist目录下的index.html，这样就打开了我们的管理系统。那么我们就要配置nginx.conf。本坑的nginx默认配置是在这里```/etc/nginx/conf.d/default.conf```,配置如下：</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">server &#123;</span><br><span class="line">    listen       80 default_server;</span><br><span class="line">    listen       [::]:80 default_server;</span><br><span class="line">    server_name  _;</span><br><span class="line">    #下面需要把根目录转到项目根目录下</span><br><span class="line">    root         /usr/share/nginx/html/dist;</span><br><span class="line"></span><br><span class="line">    # Load configuration files for the default server block.</span><br><span class="line">    include /etc/nginx/default.d/*.conf;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    #ajax请求要转发到后台服务</span><br><span class="line">    location ~ /api/ &#123;</span><br><span class="line">                proxy_pass http://127.0.0.1:3002;</span><br><span class="line">                proxy_read_timeout      7200;</span><br><span class="line">                proxy_connect_timeout   15;</span><br><span class="line">                proxy_set_header        Host zc.dev.your.111.com;</span><br><span class="line">                proxy_set_header        X-Forwarded-For     $proxy_add_x_forwarded_for;</span><br><span class="line">                client_max_body_size 2000m;</span><br><span class="line">                break;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></p><p>好了，重启nginx。使用浏览器输入ip,本坑是<code>23.94.74.24</code>,注册账号，登录，成功！</p><blockquote><p>好了，整个部署就完成了，后面本坑将继续丰富前后端代码和UI,继续开发与记录。</p></blockquote><p>系列文章：<br><a href="https://www.jianshu.com/p/afbdd1afc732" target="_blank" rel="noopener">Vue 内容管理系统的搭建（一）</a><br><a href="https://www.jianshu.com/p/7b7d71680155" target="_blank" rel="noopener">Vue 内容管理系统的搭建（二）</a><br><a href="https://www.jianshu.com/p/9a29c2623eb8" target="_blank" rel="noopener">Vue内容管理系统的搭建（三）</a><br><a href="https://www.jianshu.com/p/98b2bbd81f68" target="_blank" rel="noopener">Vue内容管理系统的搭建(四)之第三方授权与验证</a><br><a href="http://www.jianshu.com/p/7df8a81c4a88" target="_blank" rel="noopener">Vue内容管理系统的搭建(五)之权限控制</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;购买服务器部署个人项目是很多前端开发人员特别是刚开始进入行业的人士都很想去做但是又厌倦服务器繁琐配置的一件事(现在有些已经帮你搞好所有了)。本坑开始也是这样想的，既不太明白Linux 也不太清楚Ubuntu以及其他服务器知识内容。然而…….好了，又
+      
+    
+    </summary>
+    
+      <category term="前端项目记录" scheme="http://zivenday.github.io/categories/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/"/>
+    
+    
+      <category term="管理系统vue" scheme="http://zivenday.github.io/tags/%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9Fvue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue内容管理系统的搭建(二)</title>
+    <link href="http://zivenday.github.io/2017/12/26/2017-12-26-Vue%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%90%AD%E5%BB%BA%EF%BC%882%EF%BC%89/"/>
+    <id>http://zivenday.github.io/2017/12/26/2017-12-26-Vue内容管理系统的搭建（2）/</id>
+    <published>2017-12-25T16:00:00.000Z</published>
+    <updated>2017-12-27T03:57:47.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>上篇，把前端项目搭建好，接下来就是express的任务了<br>github托管的代码地址：</p><p><pre><br><a href="https://github.com/githubziven/service" target="_blank" rel="noopener">https://github.com/githubziven/service</a><br></pre><br>同样，从官网出发。传送门：</p><p><pre><br><a href="http://www.expressjs.com.cn/" target="_blank" rel="noopener">http://www.expressjs.com.cn/</a><br></pre><br>按照指引就可以轻松的把express api搭好。<br>如果你的hello express得到成功的呈现，那么又成功了一步。这里官网都有，本坑带过了。<br>除此之外，本坑顺带安装supervisor，它的好处就是能提高调试的效率，一旦代码得到保存，会自动重启，更新。</p><p>添加login.js处理登录请求<br>项目结构：</p><p><img src="http://upload-images.jianshu.io/upload_images/4455053-9600f1d41fe7065d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>在测试前当然要添加mysql支持 ，用navcat或者命令行把数据库表建好，这里比较简单，user对象就两个属性，一个是name 一个是password 本坑设置了name是111 密码是111.<br>login.js是包括对数据库的配置，编码前记得要安装mysql依赖。<br> login.js</p><p><pre><br>var express = require(‘express’);<br>var mysql = require(‘mysql’);<br>var connection = mysql.createConnection({<br>host: ‘localhost’,<br>user: ‘root’,<br>password: ‘123456’,<br>database: ‘very’<br>});<br>connection.connect();<br>var router = express.Router();<br>/<em> GET users listing. </em>/<br>router.post(‘/‘, function(req, res, next) {<br>var _user = req.body;<br>console.log(_user.name);<br>console.log(_user.password);<br>var name = connection.escape(_user.name);<br>var pwd = connection.escape(_user.password);<br>var sql = ‘SELECT  * FROM user WHERE name =’ + name + ‘ AND password=’ + pwd;<br>connection.query(sql, function(err, rows, fields) {<br>if (err){<br>throw err<br>}<br>else {<br>console.log(rows.length);<br>if (rows.length &gt; 0) {<br>res.json({ ‘code’: 1,message:’登录成功！’})<br>} else {<br>res.json({ ‘code’: 0,message:’用户名或密码错误！’ })<br>}<br>}<br>});<br>})<br></pre><br>安装完以后就可以用supervisor 来启动服务了。</p><p><pre><br>   supervisor   app.js<br></pre><br>或者 </p><p><pre><br>   supervisor    bin/www<br></pre><br>点击登录，正如所料<br><img src="http://upload-images.jianshu.io/upload_images/4455053-b9b375b4189f4d31.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>登录错误</p><p><img src="http://upload-images.jianshu.io/upload_images/4455053-ff2083b60dea3f5f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>   这里要特别注意的就是因为前后端分离打包部署，端口不一样，前端向后端请求时，这时浏览器会提示存在着跨域的问题。这是因为发送post请求之前，会先发一个option查询请求给服务器，如果这个option请求无法得到正常回应，后面的post请求当然也不会发送了。不太了解这个机制的可以看看阮一峰大师的一篇文章，传送门在此</p><p><pre><br><a href="http://www.ruanyifeng.com/blog/2016/04/cors.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2016/04/cors.html</a>.<br></pre><br>要解决这个问题的方法有几个。一个就送json改成jsonp,还有一种就是在app.js里添加以下代码：</p><p><pre><br>//allow custom header and CORS<br>app.all(‘<em>‘,function (req, res, next) {<br>res.header(‘Access-Control-Allow-Origin’, ‘</em>‘);<br>res.header(‘Access-Control-Allow-Headers’, ‘Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild’);<br>res.header(‘Access-Control-Allow-Methods’, ‘PUT, POST, GET, DELETE, OPTIONS’);<br>if (req.method == ‘OPTIONS’) {<br>res.send(200); /让options请求快速返回/<br>}<br>else {<br>next();<br>}<br>});<br></pre><br>目的就是让option查询请求轻松无阻碍的得到回应。当然还有其他方法了，这里不说了。<br>基本的登录就是这样了，后面本坑将继续分享我的学习过程。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;上篇，把前端项目搭建好，接下来就是express的任务了&lt;br&gt;github托管的代码地址：&lt;/p&gt;
+&lt;p&gt;&lt;pre&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/githubziven/service&quot; target=&quot;_blank&quot; rel=&quot;noop
+      
+    
+    </summary>
+    
+      <category term="前端项目记录" scheme="http://zivenday.github.io/categories/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/"/>
+    
+    
+      <category term="管理系统vue" scheme="http://zivenday.github.io/tags/%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9Fvue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue内容管理系统的搭建(三)</title>
+    <link href="http://zivenday.github.io/2017/12/26/2017-12-26-Vue%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%90%AD%E5%BB%BA%EF%BC%883%EF%BC%89/"/>
+    <id>http://zivenday.github.io/2017/12/26/2017-12-26-Vue内容管理系统的搭建（3）/</id>
+    <published>2017-12-25T16:00:00.000Z</published>
+    <updated>2017-12-27T03:57:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://upload-images.jianshu.io/upload_images/4455053-8632b988361a9bb4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="一定要相信越努力越幸运"></p><p>文/ziven先生<br>标题图片/来自 IM free网站</p><p>很抱歉好久没有把系列文章及时的更下去，隔了好久才更第三篇文章，这中间拖拖拉拉发生了一些事，没有时间把要做的做下去，说来也挺沮丧的，简单的事情都没有坚持。还是那句老话，没有坚持哪有梦想，又不是富二代，官二代,你说是吧？</p><blockquote><p>关于该系列文章，将按照从简到难地记录开发过程与遇到的问题，在过程中按照一个个小模块进行细分，其中如果某个模块遇到一个知识点，将在系列文章外的文章记录博主关于该知识点的学习与想法，并且在系列文章内附上链接。</p></blockquote><p> 前两篇做到前端登入页面和后端express的搭建。登录之后就进入主界面了。在开发主界面前，必须要知道主要界面的需求是啥，有了需求后，怎么布局主界面。当然也可以先想好主界面怎么布局，再统计下需求是什么。</p><blockquote><p>关于视觉设计方面，一来这是个管理系统，视觉上的体验要求其实并不是那么高，二来由于时间关系，将在系列文章后面记录该内容，当然正规上线的项目是需要把设计做好才进行开发的。</p></blockquote><p>按照博主的需求，要管理系统管理的网站主要有两个模块需要进行管理，一个是反馈页面的反馈信息进行管理，一个是全景图页面的管理，所谓管理就是要增删改查，图片要可以上传等等。<br>除此之外管理系统，要有使用该管理系统的用户管理，所以，管理系统还需要用户管理模块，分为权限管理，用户查询，个性设置等等</p><blockquote><p>总结起来就是反馈管理，全景图管理，和用户管理三个模块。从反馈管理最简单开始，它主要涉及到table的查询与增删改查，反馈信息表，主要有反馈的时间，反馈人的姓名，反馈的信息等，管理主要是删除管理信息，时间和关键字来查询反馈信息。这样思路就有了。</p></blockquote><p><img src="http://upload-images.jianshu.io/upload_images/4455053-f0c2c277117bb9cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="主页面布局"></p><p>######element-ui 导航栏的小问题<br>在开发过程中遇到一个问题,因为之前开发经验里，element ui 导航栏通过index 来进行路由跳转的，不需要另外进行手动编写代码来启动这个跳转，然而这次开发过程，设置好index后，发现跳转无效，路由没有发生变化，前前后后黏贴官方代码也同样如此，于是根据官方文档，我在el-ment 标签添加router属性并且设置为false（虽然文档说默认是false），奇迹出现了，路由实现了跳转，不过浏览器出现如下的警告性错误，字面意思就是router这个属性获取的不是boolean类型，这个问题我现在也不知道如何修正，如果有谁知道可以在评论里告诉博主。<br><img src="http://upload-images.jianshu.io/upload_images/4455053-16c1e669e0c3d41c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="el-ment 标签添加router=&#39;false&#39;或者router=false的警告性错误"></p><blockquote><p>我暂时把它当做一个现象吧，当然可能时间版本更换有所不同，elementUI处理机制不同，而我不知道。解决上述不跳转的现象，需要另辟方法，那就是通过绑定事件，手动写方法，获取index 来跳转。</p></blockquote><p>######使用flex布局<br>之前说了，侧边栏和显示栏是两栏并列显示，可以使用el-row ，el-col来布局，然而当浏览器宽度缩小时，因为是按百分比布局，侧边栏和显示栏都会随之压缩，会导致导致布局混乱，比如显示栏换行显示，甚至是ui的样式也发生重叠的现象，后来发现element-ui在宽度不满足的情况下，都有类似情况，所以我们必须设置好min-width，侧边栏和显示栏都要设置，只设置一方，无法解决问题。<br>如果觉得用element的布局标签觉得很麻烦，或者在灵活度上不太舒服，那就使用flex布局，要实现同样效果可以轻松多了。</p><p>######element-ui导航栏，刷新页面后，导航栏对应的导航文字高亮消失了<br>我不知道这是bug,还是开发团队的设计本来就是这样做，没有找到确切的api说明，但是不管怎么样，还是可以解决，解决方法是，写个方法，判断路由路径，把路径设置到default-active属性里，这样刷新页面，对应导航的文字高亮就不消失了。<br><img src="http://upload-images.jianshu.io/upload_images/4455053-be20e072debd371b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="反馈页面初略显示"><br>好了，前端视图层的效果和编码差不多了(这里代码就不一一贴出来，因为有点多，也不是重点，所以有兴趣了解代码是什么样的，去github吧)，可是数据是死的，接下来，我们就必须把前端逻辑层和后台用express获得数据，把这些数据查出来，并且能通过关键字和时间区间来进行查询。</p><blockquote><p>前端要做的事情就是逻辑处理，路由处理等。逻辑处理有反馈页面的删除记录操作、条件查询、分页查询。路由处理就是，怎么处理路由跳转，怎么设置路由路径。博主采用的是前后端分离的概念，所以在前端发送到后台请求时，由于前后端端口不同，有本地跨域的问题，这时候需要用到vue-cli的跨域设置，下面将会说到。</p></blockquote><p>######直接贴代码，反馈页面的逻辑方法实现：</p><pre> import { queryFeedbacks, deleteFeedback } from 'api/api'; export default {    data() {        return {            formInline: {                name: '',                keywords: '',                daterange: ''            },            pickerOptions2: {                shortcuts: [{                    text: '最近一周',                    onClick(picker) {                        const end = new Date();                        const start = new Date();                        start.setTime(start.getTime() - 3600 * 1000 * 24 * 7);                        picker.$emit('pick', [start, end]);                    }                }, {                    text: '最近一个月',                    onClick(picker) {                        const end = new Date();                        const start = new Date();                        start.setTime(start.getTime() - 3600 * 1000 * 24 * 30);                        picker.$emit('pick', [start, end]);                    }                }, {                    text: '最近三个月',                    onClick(picker) {                        const end = new Date();                        const start = new Date();                        start.setTime(start.getTime() - 3600 * 1000 * 24 * 90);                        picker.$emit('pick', [start, end]);                    }                }]            },            feedbacks: [],            filtr: {                name: '',                kyw: '',                bdate: '',                edate: '',                page: 1,                pageSize: 10            },            page: {                total: 0,                sizes: [10, 20, 30],            }        }    },    mounted() {        this.getFeedbacks();    },    methods: {        onSubmit() {            this.filtr.name = this.formInline.name;            this.filtr.kyw = this.formInline.keywords;            this.filtr.bdate = this.formInline.daterange[0] ? new Date(this.formInline.daterange[0]).Format("yyyy-MM-dd") : '';            this.filtr.edate = this.formInline.daterange[1] ? new Date(this.formInline.daterange[1]).Format("yyyy-MM-dd") : '';            console.log(this.filtr)            this.getFeedbacks();        },        getFeedbacks() {            let that = this;            let param = this.filtr;            queryFeedbacks(param).then(response => {                let res = response.data;                console.log(res)                if (res.code) {                    that.page.total = res.data.total;                    that.feedbacks = res.data.feedbacks;                } else {                    this.$message({                        type: 'error',                        message: res.message                    })                }            })        },        handleDelete(index, row) {            this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {                confirmButtonText: '确定',                cancelButtonText: '取消',                type: 'warning'            }).then(() => {                removeFeedback(row.id).then(res => {                    this.$message({                        type: 'success',                        message: '删除成功!'                    });                }).catch(() => {                    this.$message({                        type: 'alert',                        message: '删除失败'                    });                })            });        },        handleSizeChange(val) {            this.filtr.pageSize = val;            this.getFeedbacks();        },        handleCurrentChange(val) {            this.filtr.page = val;            this.getFeedbacks();        }    }}Date.prototype.Format = function (fmt) {     var o = {        "M+": this.getMonth() + 1, //月份         "d+": this.getDate(), //日         "h+": this.getHours(), //小时         "m+": this.getMinutes(), //分         "s+": this.getSeconds(), //秒         "q+": Math.floor((this.getMonth() + 3) / 3), //季度         "S": this.getMilliseconds() //毫秒     };    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));    for (var k in o)        if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));    return fmt;}</pre><p>######发送请求的插件使用axios ，vue-source已不再被维护<br>与vue-source相比，axios可以说要简洁干净一些，后来，发现axios确实不错，vue官方就开始推荐使用它，vue2以后，vue-source已经停止了维护。axios对http请求的封装使得get也可以写得看上去和post请求一样，当然了，也可以把参数直接附在url后面来发送get请求。详细看官网，比较简单，不再赘述。<br>传送门：<a href="https://github.com/mzabriskie/axios" target="_blank" rel="noopener">https://github.com/mzabriskie/axios</a><br>系统用到axios：</p><pre>`import axios from 'axios'; let apiUrl='/api';export const removeFeedback=params=>{  return axios.get(\`${apiUrl}/feedbacks/remove\`,{params:params})}export const queryFeedbacks=params=>{  return axios.get(\`${apiUrl}/feedbacks/query\`,{params:params})}`</pre><p>######本地跨域使用proxytable解决<br>如果你在启动看到如下的错误，那你就得用这个设置代理了,位置在config文件夹的index.js（前提是你是用vue-cli构建的项目）。<br><code></code>xhr.js?14ed:177 XMLHttpRequest cannot load localhost:3000/feedbacks/query?name=&amp;kyw=&amp;bdate=&amp;edate=. Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, https.`<br>proxytable传送门：<a href="https://vuejs-templates.github.io/webpack/proxy.html" target="_blank" rel="noopener">https://vuejs-templates.github.io/webpack/proxy.html</a><br>系统中设置的代理：</p><pre>  dev: {    env: require('./dev.env'),    port: 8080,    autoOpenBrowser: true,    assetsSubDirectory: 'static',    assetsPublicPath: '/',    proxyTable: {//插件会虚拟一个引起跨域的服务器，代替8080端口发送请求，从而避免跨域      '/api':{//这个吧表的意思就是只要连接里有/api就转为http://127.0.0.1:3000        target:'http://127.0.0.1:3000',        changeOrigin:true,        pathRewrite:{          '^/api':''//这里意思就是转化后不用添加/api,比如/api/1就是http://127.0.01:3000/1        }      }    },</pre><p>######express只负责查数据，逻辑处理还给前端<br>express很简单，只是进行查询，删除操作，这里查询，博主把条件查询，分页查询，全部查询都融合到同一个方法中</p><pre>router.get('/remove', function (req, res, next) {    let _feedback = req.body;    console.log(_feedback.id);    let id = connection.escape(_feedback.id);    let sql = 'DELETE FROM feedbacks WHERE id=' + id;    connection.query(sql, function (err, results) {        if (results) {            res.json({ 'code': 1, message: '删除成功！' })        } else {            res.json({ 'code': 0, message: '删除失败！' })        }    })})router.get('/query', function (req, res, next) {    let _fb = req.query;    let page = (_fb.page - 1) * 10;//计算查询的起点    let ps = Number(_fb.pageSize);//计算结束点    console.log(_fb.name || _fb.kyw ? 1:0)    console.log(_fb.bdate ? 1:0)    console.log((_fb.bdate ? 1:0) & (_fb.name || _fb.kyw ? 1:0))    console.log(_fb.name || _fb.kyw)     console.log(_fb.bdate & (_fb.name || _fb.kyw))    let flitr = (_fb.name || _fb.kyw || _fb.bdate ? ' WHERE '//如果存在一条条件查询就加where,如果没有直接为空字符串        + (_fb.name ? 'name="' + _fb.name + '"' : '')//判断name是否需要查询        + (_fb.name & _fb.kyw ? ' AND ' : '')//如果两者都存在就加上and        + (_fb.kyw ? ' info like "%' + _fb.kyw + '%"' : '') : '')//判断关键字是否需要查询        + ((_fb.bdate ? 1:0) & (_fb.name || _fb.kyw ? 1:0) ? ' AND ' : '')//如果时间区间存在并且前面两个条件查询有一个存在就加上and        + (_fb.bdate ? 'date BETWEEN "' + _fb.bdate + '" AND "' + _fb.edate + '"' : '')    let sql1 = 'SELECT count(*) as total FROM feedbacks ' + flitr + ' ; '    let sql2 = 'SELECT id, name,DATE_FORMAT(date,"%Y-%m-%d") date,info FROM feedbacks ' + flitr + '  LIMIT  ' + page + ' , ' + ps    console.log(sql1 + sql2)    connection.query(sql1 + sql2, function (err, results) {        if (err) {            console.log(err);            res.json({                code: 0,                message: '[查询失败]' + err            })        } else {            res.json({                data: {                    total: JSON.parse(JSON.stringify(results[0]))[0].total,//这里要特别注意，mysql查出来的数据是object但不是可以直接键值对就可以获得值得，需要json转化。                    feedbacks: results[1]                },                code: 1,                message: '查询成功'            })            console.log(results[1])        }    })})</pre><p>最终效果图：</p><p><img src="http://upload-images.jianshu.io/upload_images/4455053-2a1dfcbde88054a8.gif?imageMogr2/auto-orient/strip" alt="反馈页面模块效果"></p><p>托管的代码地址：</p><pre>前端：https://github.com/githubziven/font后台：https://github.com/githubziven/service</pre><p>好了，差不多了，终于把第三篇比较完整的写出来，有很多不完善的地方，将在后面几篇文章发布的同时，进行同步更新。<strong>下篇也就是第四篇，是关于框架的上传下载，就是全景图页面的实现</strong>。不足之处，评论指出，万分感谢！！</p><p>######系列文章：<br><a href="http://www.jianshu.com/p/afbdd1afc732" target="_blank" rel="noopener">1、Vue2.0+Element+express+mysql 内容管理系统的搭建（一）</a><br><a href="http://www.jianshu.com/p/7b7d71680155" target="_blank" rel="noopener">2、Vue2.0+Element+express+mysql 内容管理系统的搭建（二）</a><br><a href="http://www.jianshu.com/p/9a29c2623eb8" target="_blank" rel="noopener">3、Vue2.0+Element+express+mysql 内容管理系统的搭建（三）</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/4455053-8632b988361a9bb4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; 
+      
+    
+    </summary>
+    
+      <category term="前端项目记录" scheme="http://zivenday.github.io/categories/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/"/>
+    
+    
+      <category term="管理系统vue" scheme="http://zivenday.github.io/tags/%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9Fvue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前后端分离--拿起node反向代理的武器（全记录）</title>
+    <link href="http://zivenday.github.io/2017/12/26/2017-12-26-%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB--%E6%8B%BF%E8%B5%B7node%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E7%9A%84%E6%AD%A6%E5%99%A8%EF%BC%88%E5%85%A8%E8%AE%B0%E5%BD%95%EF%BC%89/"/>
+    <id>http://zivenday.github.io/2017/12/26/2017-12-26-前后端分离--拿起node反向代理的武器（全记录）/</id>
+    <published>2017-12-25T16:00:00.000Z</published>
+    <updated>2018-10-11T09:55:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://upload-images.jianshu.io/upload_images/4455053-6f18798fda6ebd16.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="做个勇往直前的人，做个勇往直前的前端"><br>文/ziven<br>标题图/来自网络</p><blockquote><p>前后端分离是个很重要的概念，尤其是今天的大前端时代。jsp，html嵌套在java web项目中似乎显得比较古老而厚重。当我们处在前后端分离开发的阶段时，如何更科学的分工合作便是一个挑战，因为后台们已经不在是整个项目的中心，前端有更大的自由度，逻辑处理慢慢在前端就进行处理。其中前后端跨域访问，接口数据访问规范便是要处理的课题。本坑在本文中针对前后端分离的情况下如何使用反向代理来解决以上问题的开发过程进行记录。文章内容有错记得评论告诉本坑哟。</p></blockquote><p>######反向代理和正向代理</p><blockquote><p>代理对于中国人来说真的是太熟悉不过了，如果你想到外面的’百果园’看看，你就得需要所谓的vpn。大多数体验 过vpn上网的就知道代理起到什么样的作用。好了，就是外面有很多的‘你懂得’。</p></blockquote><p>前面说到反向代理，那么正向代理和它有什么区别呢？用一句话来概括，就是正向代理代理的是客户端，而反向代理代理的是服务器端。通过这样一句话，还是不理解是不是？再用一句话来解释这句话。正向代理让服务端不知道谁在请求服务，而反向代理让客户端不知道服务来自哪里。<br>用一个比喻，滴滴打车app就是一个‘反向代理’的例子，因为在打车时，我们不知道哪量车来服务我们，我们只要点击打车按钮就是了，滴滴打车告诉我们车牌号是因为消费者要知道提供服务者是谁，以便提高服务体验，维权等等。一个访问，一个请求很显然，不知道提供服务是谁是可以的。<br> 当然这是概念上的区分，具体机制上他们也有区别，Google一下吧，这里不在赘述。</p><p>######nodejs的反向代理<br>除了Nginx为反向代理而设计，nodejs神器也可以做到，不过它不是为代理而生的。npm有很多专门用于http链接代理的中间件，在本坑的开发过程中用到http-proxy-middle ，http-proxy。这两个插件我都尝试进行代理功能的实现，但是前者我没有成功，后者成功了。在很多网上的教程里头也提到，nodejs可以通过代理来处理负载均衡的问题。是不是感觉nodejs要飞上天了，反正我觉得确实。</p><p>######设置和使用反向代理</p><blockquote><p>本坑开发的是一个古老的管理平台的初始版本，前端是html的聚合，后台是java web，管理平台需要登录后才能查询数据，并且每次查询数据都要对登录角色进行授权。那么问题来了，一个个html如何访问后台数据呢？而且要方便的使用后台数据呢？后台的大神们可是不会开心的帮你的。</p></blockquote><p> 我们要处理的东西就是需要用nodejs写个脚本，来运行本地html，css等等的静态文件，而ajax请求就被代理到目标服务器中去，从而获取一系列的数据。<br>如前面所说，本坑用的反向代理插件是http-proxy。没有的需要先npm安装这个插件。<br>综合来说，重点是写一个服务器脚本。脚本的主要功能就是运行本地文件和代理ajax请求到目标ip去。还有一个重点就是保持sessionid一致。为什么呢，因为后台是通过通过sessionid是否一致来判断是否是同一个用户。如果不是，Tomcat会因为连接会话不同重新生成一个jsessionid，因为id不同，后台认为用户没有登录，就会被禁止访问，需要重新登录，当然重新登录以后，还是id会变动，依然不能访问。没有这部分需求的，就没有必要把sessionid保持一致写到代理中。所有的这些逻辑都写在了proxy.js中。注意了，本坑的本地文件和proxy.js的位置是同一个目录下，当然，目录可以自己设置在哪儿。<br>proxy.js代码传送门：</p><p><pre> <a href="https://github.com/githubziven/express-proxy/blob/master/proxy.js" target="_blank" rel="noopener">https://github.com/githubziven/express-proxy/blob/master/proxy.js</a></pre><br>运行写好的脚本指令：</p><p><pre>supervisor proxy.js</pre><br>到这里，本坑的系统首先需要登录，浏览器输入127.0.0.1：8001/login.html，登录(登录也是代理过去)后就能得到反向代理后得到数据了，再也不用问后台大神们要后台数据了。</p><p>######跨域小疑问<br>为什么反向代理可以解决前端们苦恼的跨域呢？对于不允许跨域访问的目标服务器来说，代理服务器必须要与目标服务器放到同一个域名下。这样代理才是有效的。对于允许跨域访问的目标服务器来说，为什么我们还需要反向代理呢？因为浏览器有跨域限制。XmlHttpRequest只允许请求当前源（域名、协议、端口）的资源，所以Ajax是不允许跨域的。利用反向代理后，当Ajax访问本地服务器时，它被转发到目标服务器，对于浏览器来说，它并不知道目标服务器的存在，就好像访问自己的服务器的资源一样，就没有跨域了。<br>好了，回过头来看看整个过程，是不是发现还是很轻松的，简简单单的几段js代码就能代理请求。不管是轻松还是不轻松，终究我们更了解了反向代理。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/4455053-6f18798fda6ebd16.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; 
+      
+    
+    </summary>
+    
+      <category term="node" scheme="http://zivenday.github.io/categories/node/"/>
+    
+    
+      <category term="node" scheme="http://zivenday.github.io/tags/node/"/>
+    
+      <category term="反向代理" scheme="http://zivenday.github.io/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue内容管理系统的搭建(五)之第三方授权</title>
+    <link href="http://zivenday.github.io/2017/12/26/2017-12-26-Vue%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%90%AD%E5%BB%BA%EF%BC%885%EF%BC%89%E4%B9%8B%E7%AC%AC%E4%B8%89%E6%96%B9%E6%8E%88%E6%9D%83/"/>
+    <id>http://zivenday.github.io/2017/12/26/2017-12-26-Vue内容管理系统的搭建（5）之第三方授权/</id>
+    <published>2017-12-25T16:00:00.000Z</published>
+    <updated>2017-12-27T03:57:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://upload-images.jianshu.io/upload_images/4455053-7da718e6cb73cc40.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="oauth授权"></p><h4 id="oauth2-0第三方授权"><a href="#oauth2-0第三方授权" class="headerlink" title="oauth2.0第三方授权"></a>oauth2.0第三方授权</h4><blockquote><p>本文描述的是按照oauth2.0第三方授权的实践过程。过于什么oauth2.0，著名的阮大师在两年前在自己的博客中进行了详细的描述，如果你还不太理解相关内容可以访问<a href="http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html" target="_blank" rel="noopener">这篇文章</a>,这里不再赘述。</p></blockquote><h4 id="github授权登录"><a href="#github授权登录" class="headerlink" title="github授权登录"></a>github授权登录</h4><blockquote><p>本坑尝试着用微信第三方授权方式练练手，然后微信开发平台要求，使用它们的授权需要有上传一份关于使用授权网站的信息的文档，其中一项是网站的备案信息，显然对于在本地测试了，没有域名和服务器的穷屌丝是没有办法，好在墙外的应用并不需要，如github，授权方式万变不如其中，基本原理也是一样的。如果要动手微信的第三方授权的盆友可能需要稍微注意一下，好了开始动手了。</p></blockquote><p>首先到github的setting=&gt; OAuth application =&gt; Register a new application注册应用,完成填写相关注册信息后如下：</p><p><img src="http://upload-images.jianshu.io/upload_images/4455053-13a1d43dbdc6d699.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="注册完应用后返回的ID和密码"></p><p><img src="http://upload-images.jianshu.io/upload_images/4455053-4192002f55467707.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="其他信息"><br>可以看到的回调链接说明，我们可以对功能进行本地电脑的测试，这边国内其他应用显然要开放一点。<br>github的授权的流程是按照标准的oauth2.0协议来的。这一点从<a href="https://developer.github.com/apps/building-integrations/setting-up-and-registering-oauth-apps/about-authorization-options-for-oauth-apps/" target="_blank" rel="noopener">github官网文档</a>也同样可以知道。<br>所以首先前端触发事件重定向到官网的授权页面，链接请求需要包括注册的client_id和scope。注意是重定向，不是post或get请求。<br>紧接着我们可以看到官方返回到oauthLogin(以本坑为例)页面，页面浏览器出现code。这是授权码，有了授权码，加上client_id，client_secret,code 发送post请求，注意了，这个请求一般交于后台操作，也就是说前端先向后台请求，后台再向官方发送请求。以此获得access_token。<br>有了access_token，后台就可以继续发送获取用户信息的get请求了。就此完成整个授权和获取信息的过程。</p><blockquote><p>以上通过总结性的语言来概述，由于网络上相关资料比较充足并且简易，本坑大致描述github的授权实践过程。其中后台用于发送请求用到<a href="http://visionmedia.github.io/superagent/" target="_blank" rel="noopener">superagent</a>，它是很好用的ajax api，比node自带的http请求要简易一些。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/4455053-7da718e6cb73cc40.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; 
+      
+    
+    </summary>
+    
+      <category term="前端项目记录" scheme="http://zivenday.github.io/categories/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/"/>
+    
+    
+      <category term="管理系统vue" scheme="http://zivenday.github.io/tags/%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9Fvue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue内容管理系统的搭建(四)之权限控制</title>
+    <link href="http://zivenday.github.io/2017/12/26/2017-12-26-Vue%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%90%AD%E5%BB%BA%EF%BC%884%EF%BC%89%E4%B9%8B%E5%8A%A8%E6%80%81%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6/"/>
+    <id>http://zivenday.github.io/2017/12/26/2017-12-26-Vue内容管理系统的搭建（4）之动态权限控制/</id>
+    <published>2017-12-25T16:00:00.000Z</published>
+    <updated>2017-12-27T03:57:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://upload-images.jianshu.io/upload_images/4455053-57cf9a0b07a08707.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="权限控制"></p><p>文/ziven<br>标题图/stocksnap</p><blockquote><p>什么是权限控制呢？并且权限控制要发生在什么系统，运行什么阶段呢？还有就是长久以来，依照我们的经验，权限控制其实存在于管理系统各个方面、各个组件。因此我们常常会需要不同的权限控制粒度来控制系统，那么vue是如何处理这些不同粒度的权限控制的呢？接下来，本坑依据自己的理解与实际编码过程并且参考相关文章来阐述与解释这些问题和相关议题，有错记得评论告诉本坑哟！</p></blockquote><h6 id="动态权限控制粒度"><a href="#动态权限控制粒度" class="headerlink" title="动态权限控制粒度"></a>动态权限控制粒度</h6><blockquote><p>权限控制在过去的时代，大多是后台进行处理的,通过数据库的数据来配置并且用于查询用户的权限，通过对jsp，html进行条件显示或者重定向来显现一个角色的权限，然而既然是过去的时代就是已经过去了。前后端分离意味着两者特别是前者有更多的自由度，而后台无法直接的介入。那么现在，权限控制要交给谁控制更好呢呢？仔细想想不管谁控制，其目的是一样一样的，都是为了同一个目的。为了解决前端的需求，比如路由条件显示，前端会自己进行权限控制，这些后台是做不来的。而后台往往会因为安全性，也进行控制。既然为了同一个目的，在实际操作的大多数情况下是各自都会在各自的领域内进行控制，有时候可能是重复的，但并不会因此造成困扰或者说对系统造成压力。</p></blockquote><p> 在我们经常遇到的管理系统往往都是有很多角色的，比如说一般用户和管理员两个角色。我们的管理系统也往往有这样的需求：不同角色显示不同的内容。比如说每个角色导航栏是不一样的、同一个页面按钮不同角色可见或不可见等等。所以大致可以看到两种粒度：一个是导航方向上的权限控制，它控制的是不同角色显示不同的功能模块；一个是小一点的组件上的控制，就是前面所说，不同角色显示或不显示，可点击或不可点击等等。<br>对应vue来说，我们往往对小范围的组件的权限控制采用v-if或v-show来控制，实践证明这是最方便与好理解的方法。所以这个层级就没有什么好聊的了，本坑要聊的是后者。功能模块的权限控制，比如不同角色显示不同的导航栏如何做呢？还用v-if？那路由信息又如何做呢？显然这种方式用到导航栏的控制是不科学的。<br>幸运的是<a href="https://router.vuejs.org/zh-cn/advanced/meta.html" target="_blank" rel="noopener">官方文档</a>提到了路由元信息meta 字段可以用于权限的控制，官方的例子显示它可以用来控制用户是否有权限进入当前路由。它的作用在于比对，通过比对来形成控制权限，相同meta的路由形成一个角色的权限范围。同样的从官方的<a href="https://router.vuejs.org/zh-cn/api/router-instance.html" target="_blank" rel="noopener">API</a>的addRouters()可以手动添加路由，这样的话，我们要做的是写一个方法，这个方法通过比对meta信息,收集同样类型的路由，然后addRouters到现在的路由里，形成目前访问的导航权限范围，达到控制功能访问的目的。这整个过程发生在哪里？在我们进入主页面之前，登录操作之后。</p><h6 id="权限控制的实现"><a href="#权限控制的实现" class="headerlink" title="权限控制的实现"></a>权限控制的实现</h6><p>我们首先要实现的目的是用户登录后，通过判断用户角色类型，然后收集该角色可访问的路由，通过addRoutes加到路由当中，最后作为数据渲染到导航栏里。<br>本坑开发的<a href="https://github.com/githubziven/font" target="_blank" rel="noopener">express系统</a>中，用户登录后可以获得用户信息的内容有名字、token、角色类型。系统有两种登录方式，一个是用户名登录，第二个是第三方授权登录。前者的角色类型是1，后者的类型是2。1代表管理员，2代表普通用户。脚本<a href="https://github.com/githubziven/font/blob/master/src/main.js" target="_blank" rel="noopener">main.js</a>可以看到路由跳转前的逻辑处理。其中加入了路由收集和载入到vue-router中。</p><p><img src="http://upload-images.jianshu.io/upload_images/4455053-45e1fd33dd952e31.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="登录后存放在cookie的用户信息"></p><p>那么路由信息怎么收集呢？导航栏组件如何根据收集信息生成正确渲染呢？<br>我们需要给路由属性添加一些额外信息，各位看官根据实际需求来做，解决问题怎样都行。</p><p><img src="http://upload-images.jianshu.io/upload_images/4455053-85be5274fd7b5bfe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="路由信息属性"><br>为了收集路由信息，本坑在脚本中<a href="https://github.com/githubziven/font/blob/master/src/store/permission.js" target="_blank" rel="noopener">permisson.js</a> 添加GetPermissionRouter方法来实现，所有的路由信息保存在state中。<br>通过自定义子组件<a href="https://github.com/githubziven/font/blob/master/src/views/Main/SideMenu.vue" target="_blank" rel="noopener">sideMenu.vue</a>来动态生成导航组件。</p><p>好了，Vue内容管理系统的搭建系列文章到这篇就大体上要加个小暂停了。后续本坑将完善系统的前端整理，UI美化，也会把后台代码部署到云服务器中，这样可以实际运行整个前后端系统。如果这些系列文章对您有一丝丝帮助，点个赞，一起加油。</p><p>本坑系列文章：<br><a href="http://www.jianshu.com/p/afbdd1afc732" target="_blank" rel="noopener">Vue 内容管理系统的搭建（一）</a><br><a href="http://www.jianshu.com/p/7b7d71680155" target="_blank" rel="noopener">Vue 内容管理系统的搭建（二）</a><br><a href="http://www.jianshu.com/p/9a29c2623eb8" target="_blank" rel="noopener">Vue内容管理系统的搭建（三）</a><br><a href="http://www.jianshu.com/p/98b2bbd81f68" target="_blank" rel="noopener">Vue内容管理系统的搭建(四)之第三方授权与验证</a><br>参考文章<br><a href="https://juejin.im/entry/58f47b26a0bb9f006aa5476f" target="_blank" rel="noopener">手摸手，带你用vue撸后台 系列二(登录权限篇)</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/4455053-57cf9a0b07a08707.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; 
+      
+    
+    </summary>
+    
+      <category term="前端项目记录" scheme="http://zivenday.github.io/categories/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/"/>
+    
+    
+      <category term="管理系统vue" scheme="http://zivenday.github.io/tags/%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9Fvue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>margin-top奇异现象</title>
+    <link href="http://zivenday.github.io/2017/12/04/2017-12-04-margin-top%E5%A5%87%E5%BC%82%E7%8E%B0%E8%B1%A1/"/>
+    <id>http://zivenday.github.io/2017/12/04/2017-12-04-margin-top奇异现象/</id>
+    <published>2017-12-03T16:00:00.000Z</published>
+    <updated>2017-12-27T03:54:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在页面重构中，利用margin进行定位非常常见，然而margin-top这个属性经常会给我们带来一定的困扰，有时候不起作用，还把父层“拉”了下来，如图所示：<br>这里写图片描述</p><html lang="en"><br><head><br>    <meta charset="UTF-8"><br>    <title>test2</title><br><style><br>.header { width:300px; height:100px; background: green; }<br>.outer { width:300px; height:300px; background: yellow; }<br>.inner { margin-top:100px;  width:100px; height:100px; background: red;}<br></style><br></head><br><body><br><div class="header"></div><br><div class="outer"><br>    <div class="inner"></div><br></div><br></body><br></html><p>代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;test2&lt;/title&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">.header &#123; width:300px; height:100px; background: green; &#125;</span><br><span class="line">.outer &#123; width:300px; height:300px; background: yellow; &#125;</span><br><span class="line">.inner &#123; margin-top:100px;  width:100px; height:100px; background: red;&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div class=&quot;header&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;outer&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;inner&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;    </span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p><p>这是在做布局时的一个经典问题。那这个问题是怎么产生的呢？主要是合并margin的问题，红色层（子层）的margin-top与黄色层（父层）相合并，产生了共同的margin-top。其实合并margin还有其他的形式，比如说：</p><p>父层的margin-top与一系列子层中第一个层的margin-top合并<br>上层的margin-bottom与下层的margin-top合并，此时margin值为合并margin值中的最大值。至于负margin，就从正相邻margin的最大值中减去负相邻margin的绝对值的最大值。如果没有正margin，就用0减去相邻margin的绝对值的最大值<br>层高为0时，自身的margin-top和margin-bottom合并<br>那如何解决这个问题呢，w3.org给出了思路：</p><p>一个浮动的盒与任何其它盒之间的margin不会合并（甚至一个浮动盒与它的流内子级之间也不会）<br>建立了新的块格式化上下文的元素（例如，浮动盒与’overflow’不为’visible’的元素）的margin不会与它们的流内子级合并<br>绝对定位的盒的margin不会合并（甚至与它们的流内子级也不会）<br>内联盒的margin不会合并（甚至与它们的流内子级也不会）<br>一个流内块级元素的bottom margin总会与它的下一个流内块级兄弟的top margin合并，除非兄弟有空隙<br>一个流内块级元素的top margin会与它的第一个流内块级子级的top margin合并，如果该元素没有top border，没有top padding并且该子级没有空隙<br>一个’height’为’auto’并且’min-height’为0的流内块级盒的bottom margin会与它的最后一个流内块级子级的bottom margin合并，如果该盒没有bottom padding并且没有bottom border并且子级的bottom margin不与有空隙的top margin合并<br>盒自身的margin也会合并，如果’min-height’属性为0，并且既没有top或者bottom border也没有top或者bottom padding，并且其’height’为0或者’auto’，并且不含行盒，并且其所有流内子级的margin（如果有的话）都合并了<br>简单的来讲，就是</p><p>都用float来定位（有条件要求，适用范围较广）<br>为父元素添加overflow不为visiable 的属性 （适用范围极广，推荐使用）<br>为元素添加border（一般不用）<br>使用绝对定位（适用范围较窄）<br>父元素增加padding-top属性（改变尺寸，不建议使用）<br>然鹅我在用margin-top的时候又发现一个问题： 在上一个层有clear属性的时候margin-top不起作用，应该还是margin合并的问题，但是具体原因我没有分析清楚，只提供几个解决方案，供大家参考：</p><p>中间加一个层<div style="”clear:both”"></div><br>设置上一个层的margin-bottom来代替下一个层的margin-top<br>使用包裹层，并设置上下层都用float:left;<br>使用绝对定位<br>全部加上border</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在页面重构中，利用margin进行定位非常常见，然而margin-top这个属性经常会给我们带来一定的困扰，有时候不起作用，还把父层“拉”了下来，如图所示：&lt;br&gt;这里写图片描述&lt;/p&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;br&gt;&lt;head&gt;&lt;br&gt;    &lt;meta cha
+      
+    
+    </summary>
+    
+      <category term="css" scheme="http://zivenday.github.io/categories/css/"/>
+    
+    
+      <category term="css" scheme="http://zivenday.github.io/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS实现div的高度填满剩余空间</title>
+    <link href="http://zivenday.github.io/2017/09/14/2017-09-14-CSS%E5%AE%9E%E7%8E%B0div%E7%9A%84%E9%AB%98%E5%BA%A6%E5%A1%AB%E6%BB%A1%E5%89%A9%E4%BD%99%E7%A9%BA%E9%97%B4/"/>
+    <id>http://zivenday.github.io/2017/09/14/2017-09-14-CSS实现div的高度填满剩余空间/</id>
+    <published>2017-09-13T16:00:00.000Z</published>
+    <updated>2017-12-27T02:59:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>高度自适应问题，我很抵触用js去解决，因为不好维护，也不够自然，但是纯用CSS，难度不小，比如下面我要说的例子。</p><p><img src="http://pic002.cnblogs.com/images/2012/315658/2012032022302362.jpg" alt=""></p><p>需求：</p><ol><li><p>这个矩形的高度和浏览器窗口的高度相同，不能出现纵向滚动条</p></li><li><p>绿色部分高度固定，比如50px</p></li><li><p>紫色部分填充剩余的高度</p></li></ol><p>HTML结构暂且如下：</p><div id="main"><br>    <div id="nav">nav</div><br>    <div id="content">content</div><br></div><p>先看1.</p><p>html, body {<br>    height: 100%;<br>    margin: 0px;<br>    padding: 0px;<br>}</p><p>#main {<br>    background-color: #999;<br>    height: 100%;<br>} </p><p>需求2 也很容易：</p><p>#nav {<br>    background-color: #85d989;<br>    height: 50px;<br>}</p><p>需求3 是最让人头痛的，一般我们都会想到height:100%， 但是100%是以父元素的高度为准的，比如父元素的高度是300px，#nav占去了50px，#content理应是250px，但是写成height: 100%，结果就是#content的高度也变成了300%，出现了需求不允许的纵向滚动条。</p><p>当然，用js解决这种问题是相当简单的，但是这次我就是不想用js，下面就来试吧：</p><p>这个需求真的让我非常崩溃，看似简单，换了n种方式都觉得不靠谱，最后找到一种最接近理想效果的方法，如下</p><p>html, body {<br>    height: 100%;<br>    margin: 0px;<br>    padding: 0px;<br>}</p><p>#main {<br>    background-color: #999;<br>    height: 100%;<br>} </p><p>#nav {<br>    background-color: #85d989;<br>    width: 100%;<br>    height: 50px;<br>    float: left;<br>}</p><p>#content {<br>    background-color: #cc85d9;<br>    height:100%;<br>}</p><p>这里利用了浮动，最后的结果仅仅是看着没问题，当然了，如果你只是简单的展示文本和图片，这种方法已经够用了，但是如果你想用js做点交互，比如#content内部有个需要拖拽的元素，它的top最小值肯定不能是0，否则就被#nav挡住了，悲剧的是我就有这种需求，于是继续苦逼的试。</p><p>经过一天的尝试，加上高人指点，终于有解了，泪奔啊</p><p>#nav {<br>    background-color: #85d989;<br>    width: 100%;<br>    height: 50px;<br>}</p><p>#content {<br>    background-color: #cc85d9;<br>    width: 100%;<br>    position: absolute;<br>    top: 50px;<br>    bottom: 0px;<br>    left: 0px;<br>}</p><p>重点是要top和bottom一起使用，这是很反常规的用法，可以强制定义盒模型的区域，神奇啊</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;高度自适应问题，我很抵触用js去解决，因为不好维护，也不够自然，但是纯用CSS，难度不小，比如下面我要说的例子。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://pic002.cnblogs.com/images/2012/315658/2012032022302362.j
+      
+    
+    </summary>
+    
+      <category term="css" scheme="http://zivenday.github.io/categories/css/"/>
+    
+    
+      <category term="css" scheme="http://zivenday.github.io/tags/css/"/>
+    
+      <category term="随笔笔记" scheme="http://zivenday.github.io/tags/%E9%9A%8F%E7%AC%94%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="页面布局" scheme="http://zivenday.github.io/tags/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>rgb和rgba的区别</title>
+    <link href="http://zivenday.github.io/2017/09/13/2017-09-14-rgb%E5%92%8Crgba%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://zivenday.github.io/2017/09/13/2017-09-14-rgb和rgba的区别/</id>
+    <published>2017-09-13T15:08:56.000Z</published>
+    <updated>2017-09-13T15:31:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>RGBA与RGB<br>R：红色值。正整数 | 百分数</p><p>G：绿色值。正整数 | 百分数</p><p>B：蓝色值。正整数 | 百分数</p><p>A：Alpha透明度。取值0~1之间。(颜色的透明度)</p><p>此色彩模式与RGB相同,RGB定义了颜色的红绿蓝值,在RGB模式上新增了Alpha透明度.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;RGBA与RGB&lt;br&gt;R：红色值。正整数 | 百分数&lt;/p&gt;
+&lt;p&gt;G：绿色值。正整数 | 百分数&lt;/p&gt;
+&lt;p&gt;B：蓝色值。正整数 | 百分数&lt;/p&gt;
+&lt;p&gt;A：Alpha透明度。取值0~1之间。(颜色的透明度)&lt;/p&gt;
+&lt;p&gt;此色彩模式与RGB相同,RGB定义了颜色的
+      
+    
+    </summary>
+    
+      <category term="css" scheme="http://zivenday.github.io/categories/css/"/>
+    
+    
+      <category term="css" scheme="http://zivenday.github.io/tags/css/"/>
+    
+      <category term="随笔笔记" scheme="http://zivenday.github.io/tags/%E9%9A%8F%E7%AC%94%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="rgb" scheme="http://zivenday.github.io/tags/rgb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打造博客站点之旅(全记录)</title>
+    <link href="http://zivenday.github.io/2017/07/14/2017-07-14-how-to-build-blog-net/"/>
+    <id>http://zivenday.github.io/2017/07/14/2017-07-14-how-to-build-blog-net/</id>
+    <published>2017-07-14T08:48:08.000Z</published>
+    <updated>2017-09-18T09:29:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://upload-images.jianshu.io/upload_images/4455053-537d622813d33902.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="一直在寻找，一直在编程"></p><blockquote><p>最近心情不大好，诸多事情都让人显得精疲力竭，毫无生机。我知道很多人可能都和我一样，在孤独的城市一直在孤独的坚持着做孤独的事。时间一久，怀疑这种状态和追求的价值的情绪就慢慢浮在每一个早晨，回家的路上，等车的时候，晚上睡觉的时候。这当中意义究竟何在。<br> 这个过程中看了一些解决拖延症，时间管理，个人管理的文章，<a href="https://www.baidu.com/link?url=m_egjSpMgGZhEY8LMZ3qcrwc_niBRyQ9zD1da0ljaKFGyXU_3uzZvKQuGH34sqBsbxzcLltd4y8GR9V-7uXA5a&amp;wd=&amp;eqid=86c395e700003e1e000000065966d9ea" target="_blank" rel="noopener">知乎：如何解决拖延症</a> ,还有 <a href="http://www.jianshu.com/p/7c4fcd8ac19e" target="_blank" rel="noopener">简书：如何成为快乐高产的程序员</a>.写得不错，里面连带了些个人管理，习惯养成。这些文章稍许给了我继续下去的勇气与动力。</p></blockquote><p>回到正题，建立自己的博客或者说个人站点其实成为很多程序员喜欢做的事。原因有很多，我想其中最主要的原因就是能够记录下自己工作轨迹与内容。于是乎，我们也会去记录下自己的心情，观点，想法，日记，游记等等。大部分的程序员大牛都有自己的网址或者个人站点，把内容当成一种财富或者产品，是这个时代越来越重视的地方。本坑从0开始自己建立博客网站，记录在此，希望能给一些想自己建立网站的新手们多一些可以借鉴的资料。如果有错，记得评论告诉本坑。以后本坑的简书的内容也会出现在个人站点内，欢迎关注和点赞。<a href="http://zivenday.me" target="_blank" rel="noopener">本坑博客地址</a></p><blockquote><p>接下来的过程需要你具有一定的动手能力，本坑操作电脑为Mac，同时你将会了解到<a href="http://www.appinn.com/markdown/" target="_blank" rel="noopener">markdown</a>，<a href="https://pages.github.com/" target="_blank" rel="noopener">github pages</a>，<a href="http://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a>，<a href="http://www.cnblogs.com/lslvxy/p/3651936.html" target="_blank" rel="noopener">Liquid基础语法</a>等等。这些内容如果有些你并不了解，没关系，只需要你在下面阅读遇到时及时查阅了解，直到你把自己的博客站点建立并运用为止。所以本坑都当你了解以上内容，以此记录说明。</p></blockquote><h5 id="有哪些方式去建立自己的站点呢？"><a href="#有哪些方式去建立自己的站点呢？" class="headerlink" title="有哪些方式去建立自己的站点呢？"></a>有哪些方式去建立自己的站点呢？</h5><p>有很多方式，现在比较流行的工具有<a href="https://cn.wordpress.org/" target="_blank" rel="noopener">WordPress</a>，有jekyll+github pages。当然也有其他建站工具，比如，hexo+github pages，不过这里都不去提了。你也可以手动搭建一个服务器或者租赁服务器，运行一套自己写的程序系统，建立自己的博客站点。毫无疑问，我们都是新手，我们更喜欢更加快捷和方便的方式。<br>     那么wordpress和jekyll+github pages有什么区别呢？jekyll是基于html+MarkDown的博客生成方式。他强调的静态网页的生成。你只需要运用简单的markdown去书写自己博客内容，jekyll自动将其转出html，展示到世人面前。如果把整个系统上传到github ，由于github pages 整合了jekyll ，它将像在本地一样识别静态文件并且运行起来。wordpress是动态，就像我们自己编程一样，它是基于php/mysql的动态生成方式，有数据库的存在必然数据不是静态的，相比前者，WordPress站点结构显得更加自动，清晰。但是这并不意味前者不自动，也不清晰，只是相对比起来而已。本坑采用的jekyll方式去建站，一来它还有比较方便的内容书写体验，二来它结合github。如果这并不是你想要的方式，可能接下来你就没有必要再阅读下去。<br>对于大多数想拥有自己站点的盆友，都希望有个性化的域名，邮箱等等。博客域名也如此。如果你要做到这些，就得去申请这些。域名申请值得推荐的有<a href="https://sg.godaddy.com/zh?tmskey=1dom_23&amp;isc=gennbacn03&amp;countrview=1&amp;currencytype=CNY&amp;cvosrc=ppc.baidu&amp;mkwid=1edNUgIP8_pcrid_10564083847_pdv_c" target="_blank" rel="noopener">godaddy</a>,也有阿里云等等，有了域名还不够，你还得设置一个域名解析服务器去解析申请的域名。本坑使用的是国内的<a href="https://www.dnspod.cn/" target="_blank" rel="noopener">dnspod</a>。说到这里是否觉得很麻烦？其实这些内容，所有的这些实际操作都并非难事，本坑也会进行介绍解释。域名解析设置和github pages 绑定个性域名，这个将在本地站点搭建完成之后提到。</p><h5 id="jekyll-github建立空白博客站点"><a href="#jekyll-github建立空白博客站点" class="headerlink" title="jekyll+github建立空白博客站点"></a>jekyll+github建立空白博客站点</h5><p>糊涂的你可能觉得域名不域名的让人烦。先不管这些，先把具体博客站点框架本地搭起来吧。我们知道jekyll是一个静态的博客站点生成器，它的构建语言是ruby，Gem是封装起来的Ruby应用程序或代码库,在终端使用的gem命令，是指通过RubyGems管理Gem包。所以，你必须在安装jekyll前先安装ruby，如果电脑中没有安装过ruby的话。</p><pre>ruby官网下载传送门：https://www.ruby-lang.org/en/downloads/ruby版本检测指令：ruby --versionjekyll 安装: sudo gem install jekylljekyll 版本检测指令：jekyll -vjekyll 服务启动指令：jekyll serve</pre><p><img src="http://upload-images.jianshu.io/upload_images/4455053-1e64105bbf7749ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="安装后生成的jekyll目录"><br>启动jekyll后，运行<a href="http://127.0.0.1:4000/" target="_blank" rel="noopener">http://127.0.0.1:4000/</a>  你将会知道是否可以使用这个博客站点</p><p><img src="http://upload-images.jianshu.io/upload_images/4455053-53079708acee2a3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="目录结构 说明"></p><h5 id="使用完整功能的站点模板"><a href="#使用完整功能的站点模板" class="headerlink" title="使用完整功能的站点模板"></a>使用完整功能的站点模板</h5><p><a href="http://jekyllthemes.org/" target="_blank" rel="noopener">jekyll模板</a>是非常丰富的，如何使用这些模板呢?很简单，暴力下载，直接运行就行了，本坑使用的是<a href="http://jekyllthemes.org/themes/codinfox-lanyon/" target="_blank" rel="noopener">Codinfox Lanyon</a>。要如何转换成你自己的博客网站，你就得先从_config.yml开始。这里不再赘述。</p><blockquote><p>本坑测试发现，codinfox-lanyon的评论功能存在问题，要下载的要注意了。同时在更改配置信息时，baseurl需要改成“”,才能在github pages上正常运行。</p></blockquote><p>此时，我们在gihub中要做如下几件事<br>1、github你需要申请一个仓库，名字为’用户名.github.io’,<br>2、把整个模板上传到这个github这个仓库当中。<br>3、打开这个仓库的setting，像以下图一样设置。</p><p><img src="http://upload-images.jianshu.io/upload_images/4455053-3f3175a20a1415c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="github pages 设置"><br>等过几分钟，刷新设置页面，该页面会显示是否设置成功。由于我绑定了域名，我的显示如下图所示。<a href="http://zivenday.me" target="_blank" rel="noopener">本坑的博客地址</a></p><p><img src="http://upload-images.jianshu.io/upload_images/4455053-24b66e9898fa7400.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="渲染成功"></p><h5 id="域名解析配置与github-pages-域名绑定"><a href="#域名解析配置与github-pages-域名绑定" class="headerlink" title="域名解析配置与github pages 域名绑定"></a>域名解析配置与github pages 域名绑定</h5><p>本坑申请的域名为ziven.me，同时前面提到本坑使用的是dnspod来解析域名。如下两张图，其中CNAME可以不用设置。注意了，godaddy也要设置域名解析服务器就是第二张图默认的两个记录值。</p><p><img src="http://upload-images.jianshu.io/upload_images/4455053-365815c19baa0b65.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="对应域名"></p><p><img src="http://upload-images.jianshu.io/upload_images/4455053-e5d6e4464477cd17.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="对应到github pages IP"><br>以上两张图里的数据都是处在同一个表格内，以上的各行各列是什么意思呢？<br>  A (Address) 记录是用来指定主机名（或域名）对应的IP地址记录。<br>    A记录设置方法<br>    1、如果想创建不带www的记录，即abc.com，在主机记录中填写@或者留空。<br>    2、创建多个域名到同一个IP，比如给博客建了二级域名，可以使用*.blog.abc.com来指向一个IP，这样的话，不管是访问a.blog.abc.com还是b.blog.abc.com都能到同一个IP。<br>CNAME记录<br>    CNAME记录也称别名记录，它允许你将多个记录映射到同一台计算机上。具体就是你可以将一个域名做A记录指向服务器IP然后将其他的域名做别名记录到之前做A记录的域名上，那么当你的服务器IP地址变更时你就可以不必麻烦的一个一个域名更改指向了，只需要更改做A记录的那个域名其他做别名记录的那些域名的指向也将自动更改到新的IP地址上了。<br>ns 表示域名解析的服务器。</p><blockquote><p>而要github pages 绑定到指定域名就更简单了，在项目根目录新建CNAME文件，添加指定域名，比如本坑的是zivenday.me。github对应仓库setting的Custom domain设置成zivenday.me 点击保存，过几分钟就行了。</p></blockquote><p>好了，到这里大致都已经说完了，本坑的博客站点在发表文章时才刚刚建立，除了基本信息更改后，样式都是模板的。该博客将会在将来做如下更改：<br>1、修改评论的功能；<br>2、添加赞和分享的功能；<br>3、首页添加内容轮播等等效果；<br>4、添加时间分类功能；<br>5、其他修改</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/4455053-537d622813d33902.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot;
+      
+    
+    </summary>
+    
+      <category term="blog" scheme="http://zivenday.github.io/categories/blog/"/>
+    
+    
+      <category term="blogv" scheme="http://zivenday.github.io/tags/blogv/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello world!</title>
+    <link href="http://zivenday.github.io/2017/07/13/2017-7-13-my-first-blog4/"/>
+    <id>http://zivenday.github.io/2017/07/13/2017-7-13-my-first-blog4/</id>
+    <published>2017-07-13T09:57:21.000Z</published>
+    <updated>2017-07-13T09:57:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world!"></a>Hello world!</h6>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h6 id=&quot;Hello-world&quot;&gt;&lt;a href=&quot;#Hello-world&quot; class=&quot;headerlink&quot; title=&quot;Hello world!&quot;&gt;&lt;/a&gt;Hello world!&lt;/h6&gt;
+      
+    
+    </summary>
+    
+      <category term="blog" scheme="http://zivenday.github.io/categories/blog/"/>
+    
+    
+      <category term="blog" scheme="http://zivenday.github.io/tags/blog/"/>
+    
+  </entry>
+  
+</feed>
